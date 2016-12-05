@@ -9,16 +9,22 @@
 import UIKit
 
 class LeagueCell: UITableViewCell {
-
+    
+    @IBOutlet weak var leagueLbl: UILabel!
+    
+    var league: Leagues!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configureCell(_ league: Leagues) {
+        self.league = league
+        
+        self.leagueLbl.text = league.leagueKey
+        
     }
-
+    
 }

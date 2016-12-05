@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+import Foundation
+import UIKit
+
+let SHADOW_COLOUR: CGFloat = 239.0/255.0
+let ALPHA_COLOUR: CGFloat = 1
+let BLUE_COLOUR: CGFloat = 244.0/255.0

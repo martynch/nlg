@@ -12,9 +12,29 @@
 		5A071C511DF5C76800A3D7C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C4F1DF5C76800A3D7C1 /* Main.storyboard */; };
 		5A071C531DF5C76800A3D7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C521DF5C76800A3D7C1 /* Assets.xcassets */; };
 		5A071C561DF5C76800A3D7C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C541DF5C76800A3D7C1 /* LaunchScreen.storyboard */; };
+		5A071C5E1DF5C80B00A3D7C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C5D1DF5C80B00A3D7C1 /* GoogleService-Info.plist */; };
+		5A071C661DF5CB6B00A3D7C1 /* LeaguesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C651DF5CB6B00A3D7C1 /* LeaguesVC.swift */; };
+		5A071C681DF5CBD800A3D7C1 /* DivisionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C671DF5CBD800A3D7C1 /* DivisionsVC.swift */; };
+		5A071C6A1DF5CC1800A3D7C1 /* ClubsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C691DF5CC1800A3D7C1 /* ClubsVC.swift */; };
+		5A071C6C1DF5CC4800A3D7C1 /* ClubDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C6B1DF5CC4800A3D7C1 /* ClubDetailsVC.swift */; };
+		5A071C6E1DF5CC8000A3D7C1 /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C6D1DF5CC8000A3D7C1 /* Leagues.swift */; };
+		5A071C701DF5CCB000A3D7C1 /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C6F1DF5CCB000A3D7C1 /* Clubs.swift */; };
+		5A071C721DF5CCE300A3D7C1 /* Divisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C711DF5CCE300A3D7C1 /* Divisions.swift */; };
+		5A071C741DF5CD3000A3D7C1 /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C731DF5CD3000A3D7C1 /* LeagueCell.swift */; };
+		5A071C761DF5CD7900A3D7C1 /* ClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C751DF5CD7900A3D7C1 /* ClubCell.swift */; };
+		5A071C781DF5CDB300A3D7C1 /* DivisionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C771DF5CDB300A3D7C1 /* DivisionCell.swift */; };
+		5A071C7A1DF5CDE600A3D7C1 /* MatiralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C791DF5CDE600A3D7C1 /* MatiralView.swift */; };
+		5A071C7C1DF5CE3400A3D7C1 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C7B1DF5CE3400A3D7C1 /* DataServices.swift */; };
+		5A071C7E1DF5CE6100A3D7C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C7D1DF5CE6100A3D7C1 /* Constants.swift */; };
+		5A071C831DF5CED700A3D7C1 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C7F1DF5CED700A3D7C1 /* NotoSans-Bold.ttf */; };
+		5A071C841DF5CED700A3D7C1 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C801DF5CED700A3D7C1 /* NotoSans-BoldItalic.ttf */; };
+		5A071C851DF5CED700A3D7C1 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C811DF5CED700A3D7C1 /* NotoSans-Italic.ttf */; };
+		5A071C861DF5CED700A3D7C1 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */; };
+		CEC1223A3CB76BD653E26A56 /* Pods_non_league_grounds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3243D09194B9252C9CA4DAC8 /* Pods_non_league_grounds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3243D09194B9252C9CA4DAC8 /* Pods_non_league_grounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_non_league_grounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A071C481DF5C76800A3D7C1 /* non-league-grounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "non-league-grounds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A071C4B1DF5C76800A3D7C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A071C4D1DF5C76800A3D7C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +42,27 @@
 		5A071C521DF5C76800A3D7C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A071C551DF5C76800A3D7C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A071C571DF5C76800A3D7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A071C5D1DF5C80B00A3D7C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A071C651DF5CB6B00A3D7C1 /* LeaguesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaguesVC.swift; sourceTree = "<group>"; };
+		5A071C671DF5CBD800A3D7C1 /* DivisionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivisionsVC.swift; sourceTree = "<group>"; };
+		5A071C691DF5CC1800A3D7C1 /* ClubsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubsVC.swift; sourceTree = "<group>"; };
+		5A071C6B1DF5CC4800A3D7C1 /* ClubDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubDetailsVC.swift; sourceTree = "<group>"; };
+		5A071C6D1DF5CC8000A3D7C1 /* Leagues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
+		5A071C6F1DF5CCB000A3D7C1 /* Clubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
+		5A071C711DF5CCE300A3D7C1 /* Divisions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divisions.swift; sourceTree = "<group>"; };
+		5A071C731DF5CD3000A3D7C1 /* LeagueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
+		5A071C751DF5CD7900A3D7C1 /* ClubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubCell.swift; sourceTree = "<group>"; };
+		5A071C771DF5CDB300A3D7C1 /* DivisionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivisionCell.swift; sourceTree = "<group>"; };
+		5A071C791DF5CDE600A3D7C1 /* MatiralView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatiralView.swift; sourceTree = "<group>"; };
+		5A071C7B1DF5CE3400A3D7C1 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		5A071C7D1DF5CE6100A3D7C1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5A071C7F1DF5CED700A3D7C1 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		5A071C801DF5CED700A3D7C1 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		5A071C811DF5CED700A3D7C1 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		5A3F04C21DF5E4D100325ACF /* non-league-grounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "non-league-grounds.entitlements"; sourceTree = "<group>"; };
+		A1513EC6DE318E36BD8B98DD /* Pods-non-league-grounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-non-league-grounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-non-league-grounds/Pods-non-league-grounds.debug.xcconfig"; sourceTree = "<group>"; };
+		DC9254C41C06E6DDDDCEB9A9 /* Pods-non-league-grounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-non-league-grounds.release.xcconfig"; path = "Pods/Target Support Files/Pods-non-league-grounds/Pods-non-league-grounds.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +70,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC1223A3CB76BD653E26A56 /* Pods_non_league_grounds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A8A45DFF4ACCB8E37A19DC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3243D09194B9252C9CA4DAC8 /* Pods_non_league_grounds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		304E13542740A6417DDC99A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1513EC6DE318E36BD8B98DD /* Pods-non-league-grounds.debug.xcconfig */,
+				DC9254C41C06E6DDDDCEB9A9 /* Pods-non-league-grounds.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5A071C3F1DF5C76800A3D7C1 = {
 			isa = PBXGroup;
 			children = (
 				5A071C4A1DF5C76800A3D7C1 /* non-league-grounds */,
 				5A071C491DF5C76800A3D7C1 /* Products */,
+				304E13542740A6417DDC99A7 /* Pods */,
+				0A8A45DFF4ACCB8E37A19DC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +115,81 @@
 		5A071C4A1DF5C76800A3D7C1 /* non-league-grounds */ = {
 			isa = PBXGroup;
 			children = (
+				5A3F04C21DF5E4D100325ACF /* non-league-grounds.entitlements */,
+				5A071C641DF5CB0600A3D7C1 /* Model */,
+				5A071C631DF5CAF700A3D7C1 /* View */,
+				5A071C621DF5CAE600A3D7C1 /* Controller */,
+				5A071C611DF5CADD00A3D7C1 /* Resources */,
+				5A071C601DF5CACA00A3D7C1 /* Utils */,
+				5A071C5F1DF5CABD00A3D7C1 /* Services */,
 				5A071C4B1DF5C76800A3D7C1 /* AppDelegate.swift */,
-				5A071C4D1DF5C76800A3D7C1 /* ViewController.swift */,
 				5A071C4F1DF5C76800A3D7C1 /* Main.storyboard */,
 				5A071C521DF5C76800A3D7C1 /* Assets.xcassets */,
 				5A071C541DF5C76800A3D7C1 /* LaunchScreen.storyboard */,
+				5A071C5D1DF5C80B00A3D7C1 /* GoogleService-Info.plist */,
 				5A071C571DF5C76800A3D7C1 /* Info.plist */,
 			);
 			path = "non-league-grounds";
+			sourceTree = "<group>";
+		};
+		5A071C5F1DF5CABD00A3D7C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5A071C7B1DF5CE3400A3D7C1 /* DataServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5A071C601DF5CACA00A3D7C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5A071C7D1DF5CE6100A3D7C1 /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		5A071C611DF5CADD00A3D7C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A071C7F1DF5CED700A3D7C1 /* NotoSans-Bold.ttf */,
+				5A071C801DF5CED700A3D7C1 /* NotoSans-BoldItalic.ttf */,
+				5A071C811DF5CED700A3D7C1 /* NotoSans-Italic.ttf */,
+				5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5A071C621DF5CAE600A3D7C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A071C4D1DF5C76800A3D7C1 /* ViewController.swift */,
+				5A071C651DF5CB6B00A3D7C1 /* LeaguesVC.swift */,
+				5A071C671DF5CBD800A3D7C1 /* DivisionsVC.swift */,
+				5A071C691DF5CC1800A3D7C1 /* ClubsVC.swift */,
+				5A071C6B1DF5CC4800A3D7C1 /* ClubDetailsVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5A071C631DF5CAF700A3D7C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A071C731DF5CD3000A3D7C1 /* LeagueCell.swift */,
+				5A071C751DF5CD7900A3D7C1 /* ClubCell.swift */,
+				5A071C771DF5CDB300A3D7C1 /* DivisionCell.swift */,
+				5A071C791DF5CDE600A3D7C1 /* MatiralView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5A071C641DF5CB0600A3D7C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A071C6D1DF5CC8000A3D7C1 /* Leagues.swift */,
+				5A071C6F1DF5CCB000A3D7C1 /* Clubs.swift */,
+				5A071C711DF5CCE300A3D7C1 /* Divisions.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A071C5A1DF5C76800A3D7C1 /* Build configuration list for PBXNativeTarget "non-league-grounds" */;
 			buildPhases = (
+				215C2AE30B7A7F70B5800F7F /* [CP] Check Pods Manifest.lock */,
 				5A071C441DF5C76800A3D7C1 /* Sources */,
 				5A071C451DF5C76800A3D7C1 /* Frameworks */,
 				5A071C461DF5C76800A3D7C1 /* Resources */,
+				259EA3EEA8DD9C8946419D61 /* [CP] Embed Pods Frameworks */,
+				4E897F48D31E48ABB00E3BF8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -98,6 +229,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = LPABA4W369;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,13 +260,66 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A071C841DF5CED700A3D7C1 /* NotoSans-BoldItalic.ttf in Resources */,
 				5A071C561DF5C76800A3D7C1 /* LaunchScreen.storyboard in Resources */,
+				5A071C5E1DF5C80B00A3D7C1 /* GoogleService-Info.plist in Resources */,
 				5A071C531DF5C76800A3D7C1 /* Assets.xcassets in Resources */,
+				5A071C861DF5CED700A3D7C1 /* NotoSans-Regular.ttf in Resources */,
+				5A071C851DF5CED700A3D7C1 /* NotoSans-Italic.ttf in Resources */,
+				5A071C831DF5CED700A3D7C1 /* NotoSans-Bold.ttf in Resources */,
 				5A071C511DF5C76800A3D7C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		215C2AE30B7A7F70B5800F7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		259EA3EEA8DD9C8946419D61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-non-league-grounds/Pods-non-league-grounds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E897F48D31E48ABB00E3BF8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-non-league-grounds/Pods-non-league-grounds-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A071C441DF5C76800A3D7C1 /* Sources */ = {
@@ -138,7 +327,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A071C4E1DF5C76800A3D7C1 /* ViewController.swift in Sources */,
+				5A071C7C1DF5CE3400A3D7C1 /* DataServices.swift in Sources */,
+				5A071C681DF5CBD800A3D7C1 /* DivisionsVC.swift in Sources */,
+				5A071C661DF5CB6B00A3D7C1 /* LeaguesVC.swift in Sources */,
+				5A071C6E1DF5CC8000A3D7C1 /* Leagues.swift in Sources */,
+				5A071C7E1DF5CE6100A3D7C1 /* Constants.swift in Sources */,
+				5A071C741DF5CD3000A3D7C1 /* LeagueCell.swift in Sources */,
 				5A071C4C1DF5C76800A3D7C1 /* AppDelegate.swift in Sources */,
+				5A071C781DF5CDB300A3D7C1 /* DivisionCell.swift in Sources */,
+				5A071C6A1DF5CC1800A3D7C1 /* ClubsVC.swift in Sources */,
+				5A071C6C1DF5CC4800A3D7C1 /* ClubDetailsVC.swift in Sources */,
+				5A071C761DF5CD7900A3D7C1 /* ClubCell.swift in Sources */,
+				5A071C7A1DF5CDE600A3D7C1 /* MatiralView.swift in Sources */,
+				5A071C721DF5CCE300A3D7C1 /* Divisions.swift in Sources */,
+				5A071C701DF5CCB000A3D7C1 /* Clubs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +459,10 @@
 		};
 		5A071C5B1DF5C76800A3D7C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1513EC6DE318E36BD8B98DD /* Pods-non-league-grounds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "non-league-grounds/non-league-grounds.entitlements";
 				DEVELOPMENT_TEAM = LPABA4W369;
 				INFOPLIST_FILE = "non-league-grounds/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -270,8 +474,10 @@
 		};
 		5A071C5C1DF5C76800A3D7C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC9254C41C06E6DDDDCEB9A9 /* Pods-non-league-grounds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "non-league-grounds/non-league-grounds.entitlements";
 				DEVELOPMENT_TEAM = LPABA4W369;
 				INFOPLIST_FILE = "non-league-grounds/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -300,6 +506,7 @@
 				5A071C5C1DF5C76800A3D7C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

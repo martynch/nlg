@@ -7,29 +7,36 @@
 //
 
 import UIKit
+import Firebase
 
 class ClubDetailsVC: UIViewController {
-
+    
+    
+    @IBOutlet weak var clubLbl: UILabel!
+    @IBOutlet weak var groundLbl: UILabel!
+    @IBOutlet weak var chairmanLbl: UILabel!
+    @IBOutlet weak var address1Lbl: UILabel!
+    @IBOutlet weak var address2Lbl: UILabel!
+    @IBOutlet weak var address3Lbl: UILabel!
+    @IBOutlet weak var address4Lbl: UILabel!
+    @IBOutlet weak var postCodeLbl: UILabel!
+    
+    var club: Clubs!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        
+        clubLbl.text = club.clubName
+        groundLbl.text = club.groundName
+        chairmanLbl.text = club.chairman
+        address1Lbl.text = club.address1
+        address2Lbl.text = club.address2
+        address3Lbl.text = club.address3
+        address4Lbl.text = club.address4
+        postCodeLbl.text = club.postCode
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

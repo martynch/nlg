@@ -7,3 +7,24 @@
 //
 
 import Foundation
+
+class Divisions {
+    
+    //    private var _divisionDescription: String!
+    fileprivate var _divisionKey: String!
+    
+    var divisionKey: String {
+        if _divisionKey == nil {
+            _divisionKey = ""
+        }
+        return _divisionKey
+    }
+    
+    init(divisionKey: String, dictionary: Dictionary<String, AnyObject>) {
+        self._divisionKey = divisionKey
+        
+        //        print("From Division Class: \(divisionKey)")
+        
+    }
+    
+}
