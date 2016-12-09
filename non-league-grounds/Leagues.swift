@@ -10,8 +10,8 @@ import Foundation
 
 class Leagues {
     
-    private var _leagueName: String!
-    private var _leagueKey: String!
+    fileprivate var _leagueName: String!
+    fileprivate var _leagueKey: String!
     
     var leagueName: String {
         if _leagueName == nil {
@@ -27,17 +27,17 @@ class Leagues {
         return _leagueKey
     }
     
-    init(leagueKey: String, dictionary: Dictionary<String, Any>) {
-        self._leagueKey = leagueKey
-        
-    }
-    
     init(leagueName: String, dictionary: Dictionary<String, Any>) {
         self._leagueName = leagueName
         
-        if let leagueName = dictionary["league"] as? String {
+        if let leagueName = dictionary["leagueName"] as? String {
             self._leagueName = leagueName
         }
-        
     }
+    
+    // Not Used
+    init(leagueKey: String, dictionary: Dictionary<String, Any>) {
+        self._leagueKey = leagueKey
+        
+    } 
 }

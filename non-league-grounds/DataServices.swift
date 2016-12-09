@@ -13,7 +13,7 @@ let DB_BASE = FIRDatabase.database().reference()
 
 
 public var LEAGUE_KEY: String!
-public var DIVISION_KEY: String!
+private var CLUB_KEY: String!
 
 
 class DataService {
@@ -21,6 +21,7 @@ class DataService {
     
     private var _REF_BASE = DB_BASE
     private var _REF_LEAGUES = DB_BASE.child("league")
+    private var _REF_CLUBS = DB_BASE.child("clubs")
     
     var REF_BASE: FIRDatabaseReference {
         return _REF_BASE
@@ -28,5 +29,9 @@ class DataService {
     
     var REF_LEAGUES: FIRDatabaseReference {
         return _REF_LEAGUES
+    }
+    
+    var REF_CLUBS: FIRDatabaseReference {
+        return _REF_CLUBS
     }
 }

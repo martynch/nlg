@@ -12,33 +12,40 @@ import Firebase
 class ViewController: UIViewController {
     
     @IBOutlet weak var leagueCountBtn: UILabel!
-    @IBOutlet weak var divisionCountBtn: UILabel!
+
     @IBOutlet weak var clubCountBtn: UILabel!
     
     var league: Leagues!
-    var division: Divisions!
-    var clubs = [Clubs]()
+    var clubs: Clubs!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("CHET: Got to Home Page")
-        
         self.navigationItem.title = "Home"
         
         DataService.ds.REF_LEAGUES.observe(.value, with:  { snapshot in
-            
-            print("Did we get to DataService?")
             let leagueCount = snapshot.childrenCount
+            print(snapshot.childrenCount)
+            self.leagueCountBtn.text = leagueCount.description
             
-            print(leagueCount)
+        }) { (error) in
+            print(error.localizedDescription)
+            print("CHET: local error")
+            
+        }
+        
+        DataService.ds.REF_CLUBS.observe(.value, with:  { snapshot in
+            let clubCount = snapshot.childrenCount
             print(snapshot.childrenCount)
             
             // Button displays the current league count
-            self.leagueCountBtn.text = leagueCount.description
+            self.clubCountBtn.text = clubCount.description
             
-        })
+        }) { (error) in
+            print(error.localizedDescription)
+            print("CHET: local error")
+            
+        }
     }
-    
 }
 

@@ -13,6 +13,7 @@ class LeagueCell: UITableViewCell {
     @IBOutlet weak var leagueLbl: UILabel!
     
     var league: Leagues!
+    var leagueKey: Leagues!
     
     
     override func awakeFromNib() {
@@ -23,8 +24,7 @@ class LeagueCell: UITableViewCell {
     func configureCell(_ league: Leagues) {
         self.league = league
         
-        self.leagueLbl.text = league.leagueKey
-        
+        self.leagueLbl.text = league.leagueName
     }
     
 }

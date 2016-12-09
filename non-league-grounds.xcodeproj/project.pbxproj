@@ -14,15 +14,12 @@
 		5A071C561DF5C76800A3D7C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C541DF5C76800A3D7C1 /* LaunchScreen.storyboard */; };
 		5A071C5E1DF5C80B00A3D7C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C5D1DF5C80B00A3D7C1 /* GoogleService-Info.plist */; };
 		5A071C661DF5CB6B00A3D7C1 /* LeaguesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C651DF5CB6B00A3D7C1 /* LeaguesVC.swift */; };
-		5A071C681DF5CBD800A3D7C1 /* DivisionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C671DF5CBD800A3D7C1 /* DivisionsVC.swift */; };
 		5A071C6A1DF5CC1800A3D7C1 /* ClubsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C691DF5CC1800A3D7C1 /* ClubsVC.swift */; };
 		5A071C6C1DF5CC4800A3D7C1 /* ClubDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C6B1DF5CC4800A3D7C1 /* ClubDetailsVC.swift */; };
 		5A071C6E1DF5CC8000A3D7C1 /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C6D1DF5CC8000A3D7C1 /* Leagues.swift */; };
 		5A071C701DF5CCB000A3D7C1 /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C6F1DF5CCB000A3D7C1 /* Clubs.swift */; };
-		5A071C721DF5CCE300A3D7C1 /* Divisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C711DF5CCE300A3D7C1 /* Divisions.swift */; };
 		5A071C741DF5CD3000A3D7C1 /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C731DF5CD3000A3D7C1 /* LeagueCell.swift */; };
 		5A071C761DF5CD7900A3D7C1 /* ClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C751DF5CD7900A3D7C1 /* ClubCell.swift */; };
-		5A071C781DF5CDB300A3D7C1 /* DivisionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C771DF5CDB300A3D7C1 /* DivisionCell.swift */; };
 		5A071C7A1DF5CDE600A3D7C1 /* MatiralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C791DF5CDE600A3D7C1 /* MatiralView.swift */; };
 		5A071C7C1DF5CE3400A3D7C1 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C7B1DF5CE3400A3D7C1 /* DataServices.swift */; };
 		5A071C7E1DF5CE6100A3D7C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C7D1DF5CE6100A3D7C1 /* Constants.swift */; };
@@ -44,15 +41,12 @@
 		5A071C571DF5C76800A3D7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A071C5D1DF5C80B00A3D7C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A071C651DF5CB6B00A3D7C1 /* LeaguesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaguesVC.swift; sourceTree = "<group>"; };
-		5A071C671DF5CBD800A3D7C1 /* DivisionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivisionsVC.swift; sourceTree = "<group>"; };
 		5A071C691DF5CC1800A3D7C1 /* ClubsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubsVC.swift; sourceTree = "<group>"; };
 		5A071C6B1DF5CC4800A3D7C1 /* ClubDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubDetailsVC.swift; sourceTree = "<group>"; };
 		5A071C6D1DF5CC8000A3D7C1 /* Leagues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
 		5A071C6F1DF5CCB000A3D7C1 /* Clubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
-		5A071C711DF5CCE300A3D7C1 /* Divisions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divisions.swift; sourceTree = "<group>"; };
 		5A071C731DF5CD3000A3D7C1 /* LeagueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
 		5A071C751DF5CD7900A3D7C1 /* ClubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubCell.swift; sourceTree = "<group>"; };
-		5A071C771DF5CDB300A3D7C1 /* DivisionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivisionCell.swift; sourceTree = "<group>"; };
 		5A071C791DF5CDE600A3D7C1 /* MatiralView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatiralView.swift; sourceTree = "<group>"; };
 		5A071C7B1DF5CE3400A3D7C1 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		5A071C7D1DF5CE6100A3D7C1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -164,7 +158,6 @@
 			children = (
 				5A071C4D1DF5C76800A3D7C1 /* ViewController.swift */,
 				5A071C651DF5CB6B00A3D7C1 /* LeaguesVC.swift */,
-				5A071C671DF5CBD800A3D7C1 /* DivisionsVC.swift */,
 				5A071C691DF5CC1800A3D7C1 /* ClubsVC.swift */,
 				5A071C6B1DF5CC4800A3D7C1 /* ClubDetailsVC.swift */,
 			);
@@ -176,7 +169,6 @@
 			children = (
 				5A071C731DF5CD3000A3D7C1 /* LeagueCell.swift */,
 				5A071C751DF5CD7900A3D7C1 /* ClubCell.swift */,
-				5A071C771DF5CDB300A3D7C1 /* DivisionCell.swift */,
 				5A071C791DF5CDE600A3D7C1 /* MatiralView.swift */,
 			);
 			name = View;
@@ -187,7 +179,6 @@
 			children = (
 				5A071C6D1DF5CC8000A3D7C1 /* Leagues.swift */,
 				5A071C6F1DF5CCB000A3D7C1 /* Clubs.swift */,
-				5A071C711DF5CCE300A3D7C1 /* Divisions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -328,18 +319,15 @@
 			files = (
 				5A071C4E1DF5C76800A3D7C1 /* ViewController.swift in Sources */,
 				5A071C7C1DF5CE3400A3D7C1 /* DataServices.swift in Sources */,
-				5A071C681DF5CBD800A3D7C1 /* DivisionsVC.swift in Sources */,
 				5A071C661DF5CB6B00A3D7C1 /* LeaguesVC.swift in Sources */,
 				5A071C6E1DF5CC8000A3D7C1 /* Leagues.swift in Sources */,
 				5A071C7E1DF5CE6100A3D7C1 /* Constants.swift in Sources */,
 				5A071C741DF5CD3000A3D7C1 /* LeagueCell.swift in Sources */,
 				5A071C4C1DF5C76800A3D7C1 /* AppDelegate.swift in Sources */,
-				5A071C781DF5CDB300A3D7C1 /* DivisionCell.swift in Sources */,
 				5A071C6A1DF5CC1800A3D7C1 /* ClubsVC.swift in Sources */,
 				5A071C6C1DF5CC4800A3D7C1 /* ClubDetailsVC.swift in Sources */,
 				5A071C761DF5CD7900A3D7C1 /* ClubCell.swift in Sources */,
 				5A071C7A1DF5CDE600A3D7C1 /* MatiralView.swift in Sources */,
-				5A071C721DF5CCE300A3D7C1 /* Divisions.swift in Sources */,
 				5A071C701DF5CCB000A3D7C1 /* Clubs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

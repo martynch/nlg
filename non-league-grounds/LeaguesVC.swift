@@ -18,39 +18,31 @@ class LeaguesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("CHET: DID WE GET TO LEAGUESVC")
-        
         self.navigationItem.title = "LEAGUES"
         
         tableView.dataSource = self
         tableView.delegate = self
         
-        print("CHET: JUST BEFORE LEAGUES")
-
         DataService.ds.REF_LEAGUES.observe(.value, with: { (snapshot) in
-            print("CHET: JUST AFTER LEAGUES")
             
-        print(snapshot.value ?? "Nothing to see")
-        print("CHET: \(snapshot.childrenCount)")
             
             self.leagues = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
                 for snap in snapshot {
-                    print("LEAGUE: \(snap)")
-                    
                     if let leagueDict = snap.value as? Dictionary<String, Any> {
                         let key = snap.key
-                        let league = Leagues(leagueKey: key, dictionary: leagueDict)
+                        let league = Leagues(leagueName: key, dictionary: leagueDict)
                         self.leagues.append(league)
+                        
+                        print("LEAGUE: \(snap.key)")
+                        print("LEAGUE: \(league.leagueName)")
                     }
                 }
             }
             
             self.tableView.reloadData()
-            
-        })
-        
+        }) 
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,21 +74,17 @@ class LeaguesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         league = leagues[indexPath.row]
         
-        print(league.leagueKey)
-        
-        performSegue(withIdentifier: "DivisionsVC", sender: league) // To Destination from Here
+        performSegue(withIdentifier: "ClubsVC", sender: league) // To Destination from Here
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "DivisionsVC" { // To Destination VS
-            if let detailVC = segue.destination as? DivisionsVC { // To Destination fro Here
+        if segue.identifier == "ClubsVC" { // To Destination VS
+            if let detailVC = segue.destination as? ClubsVC { // To Destination fro Here
                 if let league = sender as? Leagues { //
                     detailVC.league = league
                 }
-                
             }
         }
     }
-    
 }

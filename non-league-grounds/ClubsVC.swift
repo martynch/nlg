@@ -12,49 +12,57 @@ import Firebase
 class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var divisionLbl: UILabel!
+    @IBOutlet weak var leagueLbl: UILabel!
     
-    var division: Divisions!
+    var league: Leagues!
     var clubs = [Clubs]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DIVISION_KEY = ""
-        DIVISION_KEY = division.divisionKey
+        LEAGUE_KEY = ""
+        LEAGUE_KEY = league.leagueKey
         
         tableView.dataSource = self
         tableView.delegate = self
         
-//        let REF_CHOSEN_DIVISION = Firebase(url: "\(URL_BASE)/Leagues/\(LEAGUE_KEY)/\(division.divisionKey)/Club/")
-        divisionLbl.text = division.divisionKey
         
-        //        print (division.divisionKey)
+//        let REF_CHOSEN_LEAGUE = DataService.ds.REF_BASE.child("clubs").child(LEAGUE_KEY)
         
-        // need to query by assending order
-//        REF_CHOSEN_DIVISION?.queryOrderedByValue().observe(.value, with: { snapshot in
-//            
-//            //        print("SNAP KEY: \(snapshot.key)")
-//            //        print("SNAP VALUE: \(snapshot.value)")
-//            
-//            
-//            self.clubs = []
-//            if let snapshots = snapshot?.children.allObjects as? [FDataSnapshot] {
-//                
-//                for snap in snapshots {
-//                    //                print("CLUB: \(snap)")
-//                    
-//                    if let clubDict = snap.value as? Dictionary<String, AnyObject> {
-//                        let key = snap.key
-//                        let clubs = Clubs(clubKey: key!, dictionary: clubDict)
-//                        self.clubs.append(clubs)
-//                    }
-//                }
-//            }
-//            
-//            self.tableView.reloadData()
-//            
-//        })
+        let REF_CHOSEN_LEAGUE = DataService.ds.REF_BASE.child("clubs")
+        
+        print(league.leagueName)
+        print(league.leagueKey)
+        
+        leagueLbl.text = league.leagueName
+        
+        
+        // need to query by ascending order
+        REF_CHOSEN_LEAGUE.queryOrderedByKey().observe(.value, with: { snapshot in
+            
+
+            self.clubs = []
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                
+                for snap in snapshots {
+                    
+                    print("CLUB: \(snap)")
+                    
+                    if let clubDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let clubs = Clubs(clubKey: key, dictionary: clubDict)
+                        self.clubs.append(clubs)
+                    }
+                }
+            }
+            
+            self.tableView.reloadData()
+            
+        }) { (error) in
+            print(error.localizedDescription)
+            print("CHET: local error")
+            
+        }
         
     }
     
@@ -71,7 +79,7 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let club = clubs[indexPath.row]
-        //        print(club.clubName)
+        print(club.clubName)
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ClubCell") as? ClubCell {
             
@@ -81,7 +89,6 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return ClubCell()
             
         }
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -90,7 +97,7 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         club = clubs[indexPath.row]
         
-        //        print(club.clubName)
+        print(club.clubName)
         
         performSegue(withIdentifier: "ClubDetailsVC", sender: club) // To Destination from Here
         
@@ -105,5 +112,4 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
         }
     }
-    
 }

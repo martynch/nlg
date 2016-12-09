@@ -86,23 +86,23 @@ class Clubs {
         return _clubKey
     }
     
-    // TODO: Revisit and add all other club details such as Club Crest, Club Address, Email and so on
-    //    init(clubName: String) {
-    //        self._clubName = clubName  // refer back to Apps Showcase part 10
-    
-    //        print("From Club Detail Class: \(clubDetail)")
-    
-    //    }
+    init(clubName: String, dictionary: Dictionary<String, Any>) {
+        self._clubName = clubName
+        
+        if let clubName = dictionary["clubs"] as? String {
+            self._clubName = clubName
+        }
+    }
     
     // convert data to dictionary
     init(clubKey: String, dictionary: Dictionary<String, AnyObject>) {
         self._clubKey = clubKey
         
-        if let clubDetails = dictionary["clubname"] as? String {
+        if let clubDetails = dictionary["clubName"] as? String {
             self._clubName = clubDetails
         }
         
-        if let groundName = dictionary["ground"] as? String {
+        if let groundName = dictionary["groundName"] as? String {
             self._groundName = groundName
         }
         

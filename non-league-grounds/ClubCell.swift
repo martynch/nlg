@@ -25,6 +25,10 @@ class ClubCell: UITableViewCell {
         
         self.clubLbl.text = club.clubName
         
+        print("Did we get to ClubCell")
+        print(club.clubName)
+        print(club.clubKey)
+        
     }
 }
 
