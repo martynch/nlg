@@ -27,17 +27,11 @@ class Leagues {
         return _leagueKey
     }
     
-    init(leagueName: String, dictionary: Dictionary<String, Any>) {
-        self._leagueName = leagueName
+    init(leagueKey: String, dictionary: Dictionary<String, Any>) {
+        self._leagueKey = leagueKey
         
         if let leagueName = dictionary["leagueName"] as? String {
             self._leagueName = leagueName
         }
     }
-    
-    // Not Used
-    init(leagueKey: String, dictionary: Dictionary<String, Any>) {
-        self._leagueKey = leagueKey
-        
-    } 
 }

@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         DataService.ds.REF_LEAGUES.observe(.value, with:  { snapshot in
             let leagueCount = snapshot.childrenCount
-            print(snapshot.childrenCount)
+//            print(snapshot.childrenCount)
             self.leagueCountBtn.text = leagueCount.description
             
         }) { (error) in
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         
         DataService.ds.REF_CLUBS.observe(.value, with:  { snapshot in
             let clubCount = snapshot.childrenCount
-            print(snapshot.childrenCount)
+//            print(snapshot.childrenCount)
             
             // Button displays the current league count
             self.clubCountBtn.text = clubCount.description
@@ -44,7 +44,6 @@ class ViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
             print("CHET: local error")
-            
         }
     }
 }

@@ -26,5 +26,4 @@ class LeagueCell: UITableViewCell {
         
         self.leagueLbl.text = league.leagueName
     }
-    
 }

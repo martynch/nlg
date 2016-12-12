@@ -27,32 +27,35 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         
         
-//        let REF_CHOSEN_LEAGUE = DataService.ds.REF_BASE.child("clubs").child(LEAGUE_KEY)
+        let REF_CHOSEN_LEAGUE = DataService.ds.REF_CLUBS.child(LEAGUE_KEY)
         
-        let REF_CHOSEN_LEAGUE = DataService.ds.REF_BASE.child("clubs")
         
         print(league.leagueName)
         print(league.leagueKey)
+        print("^^DID I PRINT THE LEAGUE NAME + KEY^^")
         
         leagueLbl.text = league.leagueName
         
         
         // need to query by ascending order
         REF_CHOSEN_LEAGUE.queryOrderedByKey().observe(.value, with: { snapshot in
-            
 
             self.clubs = []
+            print("Did I hit self.clubs")
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
+                print("CLUBS: \(snapshot.key)")
+                print("CLUBS: \(self.clubs)")
+                print("CLUBS: \(self.clubs.count)")
+
+                
                 for snap in snapshots {
-                    
-                    print("CLUB: \(snap)")
-                    
                     if let clubDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
+        
                         let clubs = Clubs(clubKey: key, dictionary: clubDict)
                         self.clubs.append(clubs)
-                    }
+                    } 
                 }
             }
             

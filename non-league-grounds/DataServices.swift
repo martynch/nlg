@@ -20,7 +20,7 @@ class DataService {
     static let ds = DataService()
     
     private var _REF_BASE = DB_BASE
-    private var _REF_LEAGUES = DB_BASE.child("league")
+    private var _REF_LEAGUES = DB_BASE.child("leagues")
     private var _REF_CLUBS = DB_BASE.child("clubs")
     
     var REF_BASE: FIRDatabaseReference {

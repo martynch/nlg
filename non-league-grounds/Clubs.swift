@@ -106,7 +106,7 @@ class Clubs {
             self._groundName = groundName
         }
         
-        if let chairman = dictionary["chairman"] as? String {
+        if let chairman = dictionary["chairmanName"] as? String {
             self._chairman = chairman
         }
         
@@ -126,7 +126,7 @@ class Clubs {
             self._address4 = address4
         }
         
-        if let postCode = dictionary["postcode"] as? String {
+        if let postCode = dictionary["postCode"] as? String {
             self._poscCode = postCode
         }
     }

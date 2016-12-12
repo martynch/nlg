@@ -32,11 +32,11 @@ class LeaguesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 for snap in snapshot {
                     if let leagueDict = snap.value as? Dictionary<String, Any> {
                         let key = snap.key
-                        let league = Leagues(leagueName: key, dictionary: leagueDict)
+                        let league = Leagues(leagueKey: key, dictionary: leagueDict)
                         self.leagues.append(league)
                         
-                        print("LEAGUE: \(snap.key)")
-                        print("LEAGUE: \(league.leagueName)")
+//                        print("LEAGUE: \(snap.key)")
+//                        print("LEAGUE: \(league.leagueName)")
                     }
                 }
             }
