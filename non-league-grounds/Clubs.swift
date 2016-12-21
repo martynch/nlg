@@ -18,6 +18,10 @@ class Clubs {
     fileprivate var _address3: String?
     fileprivate var _address4: String?
     fileprivate var _poscCode: String?
+    fileprivate var _email: String?
+    fileprivate var _webUrl: String?
+    fileprivate var _latitude: Double?
+    fileprivate var _longitude: Float?
     
     fileprivate var _clubKey: String!
     
@@ -78,12 +82,39 @@ class Clubs {
         return _poscCode!
     }
     
+    var email: String {
+        if _email == nil {
+            _email = ""
+        }
+        return _email!
+    }
+    
+    var webUrl: String {
+        if _webUrl == nil {
+            _webUrl = ""
+        }
+        return _webUrl!
+    }
     
     var clubKey: String {
         if _clubKey == nil {
             _clubKey = ""
         }
         return _clubKey
+    }
+    
+    var latitude: Double {
+        if _latitude == nil {
+            _latitude = 0
+        }
+        return _latitude!
+    }
+    
+    var longitude: Float {
+        if _longitude == nil {
+            _longitude = 0
+        }
+        return _longitude!
     }
     
     init(clubName: String, dictionary: Dictionary<String, Any>) {
@@ -129,6 +160,21 @@ class Clubs {
         if let postCode = dictionary["postCode"] as? String {
             self._poscCode = postCode
         }
+        
+        if let email = dictionary["email"]  as? String {
+            self._email = email
+        }
+        
+        if let webUrl = dictionary["webUrl"] as? String {
+            self._webUrl = webUrl
+        }
+        
+        if let latitude = dictionary["latitude"] as? Double {
+            self._latitude = latitude
+        }
+        
+        if let longitude = dictionary["longitude"] as? Float {
+            self._longitude = longitude
+        }
     }
 }
-

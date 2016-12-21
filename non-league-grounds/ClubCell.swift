@@ -22,13 +22,7 @@ class ClubCell: UITableViewCell {
     
     func configureCell(_ club: Clubs) {
         self.club = club
-        
         self.clubLbl.text = club.clubName
-        
-        print("Did we get to ClubCell")
-        print(club.clubName)
-        print(club.clubKey)
-        
     }
 }
 

@@ -22,32 +22,23 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         LEAGUE_KEY = ""
         LEAGUE_KEY = league.leagueKey
-        
+
         tableView.dataSource = self
         tableView.delegate = self
-        
-        
-        let REF_CHOSEN_LEAGUE = DataService.ds.REF_CLUBS.child(LEAGUE_KEY)
-        
-        
-        print(league.leagueName)
-        print(league.leagueKey)
-        print("^^DID I PRINT THE LEAGUE NAME + KEY^^")
         
         leagueLbl.text = league.leagueName
         
         
-        // need to query by ascending order
-        REF_CHOSEN_LEAGUE.queryOrderedByKey().observe(.value, with: { snapshot in
+        DataService.ds.REF_BASE.child("clubs").queryOrdered(byChild: "leagueKey").queryEqual(toValue: league.leagueKey).observe(.value, with: { (snapshot) in
 
             self.clubs = []
-            print("Did I hit self.clubs")
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
-                print("CLUBS: \(snapshot.key)")
-                print("CLUBS: \(self.clubs)")
-                print("CLUBS: \(self.clubs.count)")
-
+                print(snapshot)
+                
+//                print("CLUBS: \(snapshot.key)")
+//                print("CLUBS: \(self.clubs)")
+//                print("CLUBS: \(self.clubs.count)")
                 
                 for snap in snapshots {
                     if let clubDict = snap.value as? Dictionary<String, AnyObject> {
@@ -64,9 +55,7 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }) { (error) in
             print(error.localizedDescription)
             print("CHET: local error")
-            
         }
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -80,38 +69,26 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let club = clubs[indexPath.row]
-        print(club.clubName)
-        
+        let club = clubs[indexPath.row]        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ClubCell") as? ClubCell {
-            
             cell.configureCell(club)
             return cell
         } else {
             return ClubCell()
-            
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let club: Clubs!
-        
         club = clubs[indexPath.row]
-        
-        print(club.clubName)
-        
+//        print(club.clubName)
         performSegue(withIdentifier: "ClubDetailsVC", sender: club) // To Destination from Here
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let detailVC = segue.destination as? ClubDetailsVC { // To Destination from Here
             if let club = sender as? Clubs { // sender Class
                 detailVC.club = club
-                
             }
         }
     }

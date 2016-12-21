@@ -34,5 +34,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location is required to allow map directions to be used.</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fb</string>
+		<string>twitter</string>
+	</array>
 </dict>
 </plist>

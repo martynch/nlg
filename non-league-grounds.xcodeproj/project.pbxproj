@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0571C91E07162E00B1881F /* ClubLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0571C81E07162E00B1881F /* ClubLocationVC.swift */; };
 		5A071C4C1DF5C76800A3D7C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C4B1DF5C76800A3D7C1 /* AppDelegate.swift */; };
 		5A071C4E1DF5C76800A3D7C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A071C4D1DF5C76800A3D7C1 /* ViewController.swift */; };
 		5A071C511DF5C76800A3D7C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C4F1DF5C76800A3D7C1 /* Main.storyboard */; };
@@ -27,11 +28,19 @@
 		5A071C841DF5CED700A3D7C1 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C801DF5CED700A3D7C1 /* NotoSans-BoldItalic.ttf */; };
 		5A071C851DF5CED700A3D7C1 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C811DF5CED700A3D7C1 /* NotoSans-Italic.ttf */; };
 		5A071C861DF5CED700A3D7C1 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */; };
+		5A0D55A41E08354A00555C14 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559B1E08354A00555C14 /* GeoFire.m */; };
+		5A0D55A51E08354A00555C14 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559D1E08354A00555C14 /* GFBase32Utils.m */; };
+		5A0D55A61E08354A00555C14 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559F1E08354A00555C14 /* GFGeoHash.m */; };
+		5A0D55A71E08354A00555C14 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D55A11E08354A00555C14 /* GFGeoHashQuery.m */; };
+		5A0D55A81E08354A00555C14 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D55A31E08354A00555C14 /* GFQuery.m */; };
+		5A0D55AD1E0861D900555C14 /* ClubLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D55AC1E0861D900555C14 /* ClubLocation.swift */; };
+		5AE5F9601E02E6BE00554191 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5F95F1E02E6BE00554191 /* RoundedCorners.swift */; };
 		CEC1223A3CB76BD653E26A56 /* Pods_non_league_grounds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3243D09194B9252C9CA4DAC8 /* Pods_non_league_grounds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3243D09194B9252C9CA4DAC8 /* Pods_non_league_grounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_non_league_grounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0571C81E07162E00B1881F /* ClubLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubLocationVC.swift; sourceTree = "<group>"; };
 		5A071C481DF5C76800A3D7C1 /* non-league-grounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "non-league-grounds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A071C4B1DF5C76800A3D7C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A071C4D1DF5C76800A3D7C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +63,25 @@
 		5A071C801DF5CED700A3D7C1 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		5A071C811DF5CED700A3D7C1 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		5A0D55941E08354A00555C14 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
+		5A0D55951E08354A00555C14 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
+		5A0D55961E08354A00555C14 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
+		5A0D55971E08354A00555C14 /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
+		5A0D55981E08354A00555C14 /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
+		5A0D559A1E08354A00555C14 /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
+		5A0D559B1E08354A00555C14 /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
+		5A0D559C1E08354A00555C14 /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
+		5A0D559D1E08354A00555C14 /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
+		5A0D559E1E08354A00555C14 /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
+		5A0D559F1E08354A00555C14 /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
+		5A0D55A01E08354A00555C14 /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
+		5A0D55A11E08354A00555C14 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
+		5A0D55A21E08354A00555C14 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
+		5A0D55A31E08354A00555C14 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		5A0D55A91E0836DA00555C14 /* non-league-grounds-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "non-league-grounds-Bridging-Header.h"; sourceTree = "<group>"; };
+		5A0D55AC1E0861D900555C14 /* ClubLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubLocation.swift; sourceTree = "<group>"; };
 		5A3F04C21DF5E4D100325ACF /* non-league-grounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "non-league-grounds.entitlements"; sourceTree = "<group>"; };
+		5AE5F95F1E02E6BE00554191 /* RoundedCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		A1513EC6DE318E36BD8B98DD /* Pods-non-league-grounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-non-league-grounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-non-league-grounds/Pods-non-league-grounds.debug.xcconfig"; sourceTree = "<group>"; };
 		DC9254C41C06E6DDDDCEB9A9 /* Pods-non-league-grounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-non-league-grounds.release.xcconfig"; path = "Pods/Target Support Files/Pods-non-league-grounds/Pods-non-league-grounds.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,19 +136,21 @@
 		5A071C4A1DF5C76800A3D7C1 /* non-league-grounds */ = {
 			isa = PBXGroup;
 			children = (
-				5A3F04C21DF5E4D100325ACF /* non-league-grounds.entitlements */,
+				5A0D55921E08354A00555C14 /* GeoFire */,
 				5A071C641DF5CB0600A3D7C1 /* Model */,
 				5A071C631DF5CAF700A3D7C1 /* View */,
 				5A071C621DF5CAE600A3D7C1 /* Controller */,
 				5A071C611DF5CADD00A3D7C1 /* Resources */,
 				5A071C601DF5CACA00A3D7C1 /* Utils */,
 				5A071C5F1DF5CABD00A3D7C1 /* Services */,
+				5A3F04C21DF5E4D100325ACF /* non-league-grounds.entitlements */,
 				5A071C4B1DF5C76800A3D7C1 /* AppDelegate.swift */,
 				5A071C4F1DF5C76800A3D7C1 /* Main.storyboard */,
 				5A071C521DF5C76800A3D7C1 /* Assets.xcassets */,
 				5A071C541DF5C76800A3D7C1 /* LaunchScreen.storyboard */,
 				5A071C5D1DF5C80B00A3D7C1 /* GoogleService-Info.plist */,
 				5A071C571DF5C76800A3D7C1 /* Info.plist */,
+				5A0D55A91E0836DA00555C14 /* non-league-grounds-Bridging-Header.h */,
 			);
 			path = "non-league-grounds";
 			sourceTree = "<group>";
@@ -160,6 +189,7 @@
 				5A071C651DF5CB6B00A3D7C1 /* LeaguesVC.swift */,
 				5A071C691DF5CC1800A3D7C1 /* ClubsVC.swift */,
 				5A071C6B1DF5CC4800A3D7C1 /* ClubDetailsVC.swift */,
+				5A0571C81E07162E00B1881F /* ClubLocationVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -170,6 +200,7 @@
 				5A071C731DF5CD3000A3D7C1 /* LeagueCell.swift */,
 				5A071C751DF5CD7900A3D7C1 /* ClubCell.swift */,
 				5A071C791DF5CDE600A3D7C1 /* MatiralView.swift */,
+				5AE5F95F1E02E6BE00554191 /* RoundedCorners.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -179,8 +210,47 @@
 			children = (
 				5A071C6D1DF5CC8000A3D7C1 /* Leagues.swift */,
 				5A071C6F1DF5CCB000A3D7C1 /* Clubs.swift */,
+				5A0D55AC1E0861D900555C14 /* ClubLocation.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		5A0D55921E08354A00555C14 /* GeoFire */ = {
+			isa = PBXGroup;
+			children = (
+				5A0D55931E08354A00555C14 /* API */,
+				5A0D55981E08354A00555C14 /* GeoFire-Prefix.pch */,
+				5A0D55991E08354A00555C14 /* Implementation */,
+			);
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		5A0D55931E08354A00555C14 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5A0D55941E08354A00555C14 /* GeoFire.h */,
+				5A0D55951E08354A00555C14 /* GFCircleQuery.h */,
+				5A0D55961E08354A00555C14 /* GFQuery.h */,
+				5A0D55971E08354A00555C14 /* GFRegionQuery.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5A0D55991E08354A00555C14 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				5A0D559A1E08354A00555C14 /* GeoFire+Private.h */,
+				5A0D559B1E08354A00555C14 /* GeoFire.m */,
+				5A0D559C1E08354A00555C14 /* GFBase32Utils.h */,
+				5A0D559D1E08354A00555C14 /* GFBase32Utils.m */,
+				5A0D559E1E08354A00555C14 /* GFGeoHash.h */,
+				5A0D559F1E08354A00555C14 /* GFGeoHash.m */,
+				5A0D55A01E08354A00555C14 /* GFGeoHashQuery.h */,
+				5A0D55A11E08354A00555C14 /* GFGeoHashQuery.m */,
+				5A0D55A21E08354A00555C14 /* GFQuery+Private.h */,
+				5A0D55A31E08354A00555C14 /* GFQuery.m */,
+			);
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +283,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Martyn Cheatle";
 				TargetAttributes = {
 					5A071C471DF5C76800A3D7C1 = {
@@ -318,17 +388,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A071C4E1DF5C76800A3D7C1 /* ViewController.swift in Sources */,
+				5A0D55A61E08354A00555C14 /* GFGeoHash.m in Sources */,
 				5A071C7C1DF5CE3400A3D7C1 /* DataServices.swift in Sources */,
 				5A071C661DF5CB6B00A3D7C1 /* LeaguesVC.swift in Sources */,
+				5A0D55A81E08354A00555C14 /* GFQuery.m in Sources */,
 				5A071C6E1DF5CC8000A3D7C1 /* Leagues.swift in Sources */,
+				5A0D55A71E08354A00555C14 /* GFGeoHashQuery.m in Sources */,
 				5A071C7E1DF5CE6100A3D7C1 /* Constants.swift in Sources */,
 				5A071C741DF5CD3000A3D7C1 /* LeagueCell.swift in Sources */,
 				5A071C4C1DF5C76800A3D7C1 /* AppDelegate.swift in Sources */,
 				5A071C6A1DF5CC1800A3D7C1 /* ClubsVC.swift in Sources */,
+				5A0D55A51E08354A00555C14 /* GFBase32Utils.m in Sources */,
 				5A071C6C1DF5CC4800A3D7C1 /* ClubDetailsVC.swift in Sources */,
+				5AE5F9601E02E6BE00554191 /* RoundedCorners.swift in Sources */,
 				5A071C761DF5CD7900A3D7C1 /* ClubCell.swift in Sources */,
 				5A071C7A1DF5CDE600A3D7C1 /* MatiralView.swift in Sources */,
+				5A0D55AD1E0861D900555C14 /* ClubLocation.swift in Sources */,
 				5A071C701DF5CCB000A3D7C1 /* Clubs.swift in Sources */,
+				5A0571C91E07162E00B1881F /* ClubLocationVC.swift in Sources */,
+				5A0D55A41E08354A00555C14 /* GeoFire.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +450,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -399,6 +478,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "non-league-grounds/non-league-grounds-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -421,6 +501,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -440,6 +521,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "non-league-grounds/non-league-grounds-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};

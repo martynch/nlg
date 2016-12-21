@@ -8,9 +8,12 @@
 
 import UIKit
 import Firebase
+import UIKit
+import MessageUI
 
-class ClubDetailsVC: UIViewController {
+class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     
+    var clubs = [Clubs]()
     
     @IBOutlet weak var clubLbl: UILabel!
     @IBOutlet weak var groundLbl: UILabel!
@@ -22,13 +25,16 @@ class ClubDetailsVC: UIViewController {
     @IBOutlet weak var postCodeLbl: UILabel!
     
     var club: Clubs!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Lon Lat")
+        print(club.longitude)
+        print(club.latitude)
         
-        clubLbl.text = club.clubName
+        self.navigationItem.title = club.clubName
+        
         groundLbl.text = club.groundName
         chairmanLbl.text = club.chairman
         address1Lbl.text = club.address1
@@ -36,7 +42,107 @@ class ClubDetailsVC: UIViewController {
         address3Lbl.text = club.address3
         address4Lbl.text = club.address4
         postCodeLbl.text = club.postCode
-        
     }
     
+    
+    @IBAction func fbBtn(_ sender: Any) {
+        
+        // Move to Firebase
+        let fbUrlWeb: URL = URL(string: "https://www.facebook.com/groups/cliftonfc")!
+        let fbUrlID: URL = URL(string: "fb://profile/123326124363104")!
+        
+        // If user has has Facebook installed
+        if (UIApplication.shared.canOpenURL(fbUrlID)) {
+            UIApplication.shared.open(fbUrlID, options: [:], completionHandler: {
+                (Sucess) in
+            })
+        } else {
+            UIApplication.shared.open(fbUrlWeb, options: [:], completionHandler: {
+                (Sucess) in
+            })
+        }
+    }
+    
+    @IBAction func twtBtn(_ sender: Any) {
+
+        // Move to Firebase
+        let twUrl: URL = URL(string: "twitter://user?screen_name=cliftonfc1963")!
+        let twUrlWeb: URL = URL(string: "https://twitter.com/cliftonfc1963")!
+        
+        // If user has has Twitter installed
+        if (UIApplication.shared.canOpenURL(twUrl)) {
+            UIApplication.shared.open(twUrl, options: [:], completionHandler: {
+                (Sucess) in
+            })
+        } else {
+            UIApplication.shared.open(twUrlWeb, options: [:], completionHandler: {
+                (Sucess) in
+            })
+        }
+    }
+    
+    @IBAction func webBtn(_ sender: Any) {
+        
+        web(scheme: club.webUrl)
+    }
+    
+    @IBAction func mailBtn(_ sender: Any) {
+        
+        sendmail()
+    }
+    
+    @IBAction func teamBtn(_ sender: Any) {
+        
+        print("team")
+    }
+    
+    
+    @IBAction func mapBtn(_ sender: Any) {
+        
+        print("map")
+    }
+    
+    
+    func web(scheme: String) {
+        if let url = URL(string: scheme) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:],completionHandler: {
+                    (success) in
+                    print("Open \(scheme): \(success)")
+                })
+            } else {
+                let success = UIApplication.shared.openURL(url)
+                print("Open \(scheme): \(success)")
+            }
+        }
+    }
+    
+    func sendmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([club.email])
+            mail.setSubject("")
+            mail.setMessageBody("", isHTML: true)
+            
+            present(mail, animated: true, completion: nil)
+            
+        } else {
+            
+            print("Error")
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC :ClubLocationVC = segue.destination as! ClubLocationVC
+        
+        destVC.pinTitle = club.clubName
+        destVC.pinSubTitle = club.groundName
+        destVC.latitude = club.latitude
+        destVC.longitude = Double(club.longitude)
+    }
 }

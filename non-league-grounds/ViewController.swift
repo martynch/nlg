@@ -21,22 +21,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Home"
+        self.navigationItem.title = "Non-League Grounds"
         
         DataService.ds.REF_LEAGUES.observe(.value, with:  { snapshot in
             let leagueCount = snapshot.childrenCount
-//            print(snapshot.childrenCount)
             self.leagueCountBtn.text = leagueCount.description
             
         }) { (error) in
             print(error.localizedDescription)
             print("CHET: local error")
-            
         }
         
         DataService.ds.REF_CLUBS.observe(.value, with:  { snapshot in
             let clubCount = snapshot.childrenCount
-//            print(snapshot.childrenCount)
             
             // Button displays the current league count
             self.clubCountBtn.text = clubCount.description
