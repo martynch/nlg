@@ -6,18 +6,22 @@
 //  Copyright © 2016 Martyn Cheatle. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import MapKit
+import CoreLocation
 
 class ClubLocation: NSObject, MKAnnotation {
     
     var coordinate = CLLocationCoordinate2D()
-    var latitude: Double
-    var longitude: Float
+    var title: String?
+    var subtitle: String?
     
     init (coordinate: CLLocationCoordinate2D) {
+        
         self.coordinate = coordinate
-        self.latitude = coordinate.latitude
-        self.longitude = Float(coordinate.longitude)
+        
+//        self.coordinate = coordinate
+//        self.latitude = coordinate.latitude
+//        self.longitude = Float(coordinate.longitude)
     }
 }

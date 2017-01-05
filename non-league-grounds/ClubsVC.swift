@@ -81,7 +81,6 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let club: Clubs!
         club = clubs[indexPath.row]
-//        print(club.clubName)
         performSegue(withIdentifier: "ClubDetailsVC", sender: club) // To Destination from Here
     }
     

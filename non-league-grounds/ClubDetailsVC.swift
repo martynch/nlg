@@ -14,7 +14,7 @@ import MessageUI
 class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     var clubs = [Clubs]()
-    
+        
     @IBOutlet weak var clubLbl: UILabel!
     @IBOutlet weak var groundLbl: UILabel!
     @IBOutlet weak var chairmanLbl: UILabel!
@@ -23,15 +23,16 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var address3Lbl: UILabel!
     @IBOutlet weak var address4Lbl: UILabel!
     @IBOutlet weak var postCodeLbl: UILabel!
-    
+    @IBOutlet weak var clubCrest: UIImageView!
     var club: Clubs!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Lon Lat")
-        print(club.longitude)
-        print(club.latitude)
+        
+//        print("Lon Lat")
+//        print(club.longitude)
+//        print(club.latitude)
         
         self.navigationItem.title = club.clubName
         
@@ -42,6 +43,7 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
         address3Lbl.text = club.address3
         address4Lbl.text = club.address4
         postCodeLbl.text = club.postCode
+        clubCrest.image = club.crest
     }
     
     
@@ -93,15 +95,14 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBAction func teamBtn(_ sender: Any) {
         
-        print("team")
+        showAlert("Coming Soon", msg: "Line-Ups, scores, cards, players, etc")
+        
     }
-    
     
     @IBAction func mapBtn(_ sender: Any) {
         
         print("map")
     }
-    
     
     func web(scheme: String) {
         if let url = URL(string: scheme) {
@@ -131,6 +132,13 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
             
             print("Error")
         }
+    }
+    
+    func showAlert(_ title: String, msg: String) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {

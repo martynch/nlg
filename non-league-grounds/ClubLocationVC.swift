@@ -8,18 +8,15 @@
 
 import UIKit
 import MapKit
-import Firebase
+import CoreLocation
 
 class ClubLocationVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
     
-//    var club: Clubs!
     var pinTitle = String ()
     var pinSubTitle = String()
     var latitude = Double()
     var longitude = Double ()
     let locationManager = CLLocationManager()
-    var geoFire: GeoFire!
-    var geoFireRef: FIRDatabaseReference!
 
     
     @IBOutlet weak var mapView: MKMapView!
@@ -34,11 +31,11 @@ class ClubLocationVC: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         print(pinSubTitle)
         print(longitude)
         print(latitude)
-
-        self.navigationItem.title = "Location"
         
         // Create a location
         let location = CLLocationCoordinate2DMake(latitude, longitude)
+        print(location)
+        print("CHET LOCATION")
         
         // Create a span + Zoom leval
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
@@ -49,7 +46,7 @@ class ClubLocationVC: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // Set the region for the map
         self.mapView.setRegion(region, animated: true)
         
-//        //Add a pin
+        //Add a pin
         let pinAnnotationAtIndex = 0
         let pin = MKPointAnnotation()
         let btn = UIButton()
@@ -111,28 +108,32 @@ class ClubLocationVC: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         print("Ground Location")
         
-        if let anno = view.annotation as? ClubLocation {
+//        if let anno = view.annotation as? ClubLocation {
+        
+        let location = CLLocationCoordinate2DMake(latitude, longitude)
+        print(location)
             
             var place: MKPlacemark!
             if #available(iOS 10.0, *) {
-                place = MKPlacemark(coordinate: anno.coordinate)
+                place = MKPlacemark(coordinate: location)
             } else {
-                place = MKPlacemark(coordinate: anno.coordinate, addressDictionary: nil)
+                place = MKPlacemark(coordinate: location, addressDictionary: nil)
             }
             
             let destination = MKMapItem(placemark: place)
-            destination.name = "Ground Location"
+            print(place)
+            destination.name = pinSubTitle
             let regionDistance: CLLocationDistance = 1000
-            let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
+            let regionSpan = MKCoordinateRegionMakeWithDistance(location, regionDistance, regionDistance)
             
             let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey:  NSValue(mkCoordinateSpan: regionSpan.span), MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String : Any]
-            
             MKMapItem.openMaps(with: [destination], launchOptions: options)
             
             print("Above anno")
-            print(anno.coordinate)
-        }
+            print(location)
+//        }
     }
+    
 
     @IBAction func mapTypeChanged(_ sender: AnyObject) {
         

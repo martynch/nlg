@@ -21,9 +21,9 @@ class Clubs {
     fileprivate var _email: String?
     fileprivate var _webUrl: String?
     fileprivate var _latitude: Double?
-    fileprivate var _longitude: Float?
-    
+    fileprivate var _longitude: Float?    
     fileprivate var _clubKey: String!
+    fileprivate var _crest: UIImage!
     
     
     var clubName: String! {
@@ -117,6 +117,13 @@ class Clubs {
         return _longitude!
     }
     
+    var crest: UIImage {
+        if _crest == nil {
+            _crest = UIImage(named: "logo.png")
+        }
+        return _crest
+    }
+    
     init(clubName: String, dictionary: Dictionary<String, Any>) {
         self._clubName = clubName
         
@@ -125,6 +132,7 @@ class Clubs {
         }
     }
     
+  
     // convert data to dictionary
     init(clubKey: String, dictionary: Dictionary<String, AnyObject>) {
         self._clubKey = clubKey
@@ -175,6 +183,10 @@ class Clubs {
         
         if let longitude = dictionary["longitude"] as? Float {
             self._longitude = longitude
+        }
+        
+        if let crest = dictionary["crest"] as? UIImage {
+            self._crest = crest
         }
     }
 }

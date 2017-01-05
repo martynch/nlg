@@ -15,11 +15,18 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var clubCountBtn: UILabel!
     
+    @IBOutlet weak var burgerMenu: UIBarButtonItem!
+    
+    
     var league: Leagues!
     var clubs: Clubs!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        burgerMenu.target = revealViewController()
+        burgerMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+        view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.navigationItem.title = "Non-League Grounds"
         
