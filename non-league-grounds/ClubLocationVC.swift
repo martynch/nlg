@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
+
 class ClubLocationVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
     
     var pinTitle = String ()
