@@ -29,20 +29,7 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-//        print("Lon Lat")
-//        print(club.longitude)
-//        print(club.latitude)
-        print("ABOVE FACEBOOK")
-        print(club.facebook)
-        print("ABOVE TWITTER")
-        print(club.twitter)
-        
-
-        
-        
         self.navigationItem.title = club.clubName
-        
         
         groundLbl.text = club.groundName
         chairmanLbl.text = club.chairman
@@ -55,19 +42,13 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
         let url = NSURL(string: club.crest)
         clubCrest.sd_setImage(with: url as URL!, placeholderImage: #imageLiteral(resourceName: "logo"))
         
-//        let url = NSURL(string: club.crest)
-//        let data = NSData(contentsOf: url as! URL)
-//        clubCrest.image = UIImage(data: data as! Data)
     }
     
     @IBAction func fbBtn(_ sender: Any) {
         
-        // Move to Firebase
         let fbUrlWeb: URL = URL(string: "https://www.facebook.com/groups/\(club.facebook)")!
         let fbUrlID: URL = URL(string: "fb://profile/\(club.facebook)")!
-//        let fbUrlID: URL = URL(string: "fb://profile/123326124363104")!
         
-        // If user has has Facebook installed
         if (UIApplication.shared.canOpenURL(fbUrlID)) {
             UIApplication.shared.open(fbUrlID, options: [:], completionHandler: {
                 (Sucess) in
@@ -81,13 +62,9 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBAction func twtBtn(_ sender: Any) {
 
-        // Move to Firebase
-//        let twUrl: URL = URL(string: "twitter://user?screen_name=cliftonfc1963")!
         let twUrl: URL = URL(string: "twitter://user?screen_name=\(club.twitter)")!
-//        let twUrlWeb: URL = URL(string: "https://twitter.com/cliftonfc1963")!
         let twUrlWeb: URL = URL(string: "https://twitter.com/\(club.twitter)")!
         
-        // If user has has Twitter installed
         if (UIApplication.shared.canOpenURL(twUrl)) {
             UIApplication.shared.open(twUrl, options: [:], completionHandler: {
                 (Sucess) in

@@ -12,8 +12,10 @@ class LeagueCell: UITableViewCell {
     
     @IBOutlet weak var leagueLbl: UILabel!
     
+    @IBOutlet weak var leagueImg: UIImageView!
+    
     var league: Leagues!
-    var leagueKey: Leagues!
+//    var leagueKey: Leagues!
     
     
     override func awakeFromNib() {
@@ -23,7 +25,9 @@ class LeagueCell: UITableViewCell {
     
     func configureCell(_ league: Leagues) {
         self.league = league
-        
         self.leagueLbl.text = league.leagueName
+        
+        let url = NSURL(string: league.leagueImg)
+        leagueImg.sd_setImage(with: url as URL!, placeholderImage: #imageLiteral(resourceName: "logo"))
     }
 }

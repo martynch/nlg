@@ -41,11 +41,36 @@ class burgerVC: UIViewController, UITableViewDelegate, UITableViewDataSource, MF
         }
         if cell.burgerLbl.text == "Facebook"
         {
-            showAlert("Facebook will be available soon", msg: "Not Available in Beta")
+            let fbUrlWeb: URL = URL(string: "https://www.facebook.com/nonleaguegrounds")!
+            let fbUrlID: URL = URL(string: "fb://profile/368025750223986")!
+            
+            // If user has has Facebook installed
+            if (UIApplication.shared.canOpenURL(fbUrlID)) {
+                UIApplication.shared.open(fbUrlID, options: [:], completionHandler: {
+                    (Sucess) in
+                })
+            } else {
+                UIApplication.shared.open(fbUrlWeb, options: [:], completionHandler: {
+                    (Sucess) in
+                })
+            }
         }
         if cell.burgerLbl.text == "Twitter"
+            
         {
-            showAlert("Twitter will be available soon", msg: "Not Available in Beta")
+            let twUrl: URL = URL(string: "twitter://user?screen_name=nonleague_uk")!
+            let twUrlWeb: URL = URL(string: "https://twitter.com/nonleague_uk")!
+            
+            // If user has has Facebook installed
+            if (UIApplication.shared.canOpenURL(twUrl)) {
+                UIApplication.shared.open(twUrl, options: [:], completionHandler: {
+                    (Sucess) in
+                })
+            } else {
+                UIApplication.shared.open(twUrlWeb, options: [:], completionHandler: {
+                    (Sucess) in
+                })
+            }
         }
         if cell.burgerLbl.text == "Bug Report"
         {

@@ -22,7 +22,7 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         LEAGUE_KEY = ""
         LEAGUE_KEY = league.leagueKey
-
+        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -30,14 +30,14 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         
         DataService.ds.REF_BASE.child("clubs").queryOrdered(byChild: "leagueKey").queryEqual(toValue: league.leagueKey).observe(.value, with: { (snapshot) in
-
+            
             self.clubs = []
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
                 print(snapshot)
                 
-//                print("CLUBS: \(snapshot.key)")
-//                print("CLUBS: \(self.clubs)")
+//               print("CLUBS: \(snapshot.key)")
+//               print("CLUBS: \(self.clubs)")
 //                print("CLUBS: \(self.clubs.count)")
                 
                 for snap in snapshots {

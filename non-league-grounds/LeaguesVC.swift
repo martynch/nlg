@@ -24,10 +24,12 @@ class LeaguesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         
         DataService.ds.REF_LEAGUES.queryOrdered(byChild: "leagueName").observe(.value, with: { (snapshot) in
-
+            
 
             self.leagues = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                
+                print(snapshot)
                 
                 for snap in snapshot {
                     if let leagueDict = snap.value as? Dictionary<String, Any> {

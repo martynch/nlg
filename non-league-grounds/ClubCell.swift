@@ -11,6 +11,8 @@ import UIKit
 class ClubCell: UITableViewCell {
 
     @IBOutlet weak var clubLbl: UILabel!
+    @IBOutlet weak var clubImg: UIImageView!
+    
     
     var club: Clubs!
     
@@ -23,6 +25,10 @@ class ClubCell: UITableViewCell {
     func configureCell(_ club: Clubs) {
         self.club = club
         self.clubLbl.text = club.clubName
+        
+        let url = NSURL(string: club.crest)
+        clubImg.sd_setImage(with: url as URL!, placeholderImage: #imageLiteral(resourceName: "logo"))
+
     }
 }
 
