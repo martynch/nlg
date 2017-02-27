@@ -29,7 +29,7 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = club.clubName
+//        self.navigationItem.title = club.clubName
         
         groundLbl.text = club.groundName
         chairmanLbl.text = club.chairman
@@ -88,8 +88,6 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBAction func teamBtn(_ sender: Any) {
         
-        showAlert("Coming Soon", msg: "Line-Ups, scores, cards, players, etc")
-        
     }
     
     @IBAction func mapBtn(_ sender: Any) {
@@ -139,11 +137,21 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC :ClubLocationVC = segue.destination as! ClubLocationVC
         
-        destVC.pinTitle = club.clubName
-        destVC.pinSubTitle = club.groundName
-        destVC.latitude = club.latitude
-        destVC.longitude = Double(club.longitude)
+        if (segue.identifier == "MatchDayVC") {
+            
+            let destVC :MatchDayVC = segue.destination as! MatchDayVC
+            destVC.clubName = club.clubName
+            
+        } else if (segue.identifier == "ClubLocationVC") {
+            
+            let destVC :ClubLocationVC = segue.destination as! ClubLocationVC
+            
+            destVC.pinTitle = club.clubName
+            destVC.pinSubTitle = club.groundName
+            destVC.latitude = club.latitude
+            destVC.longitude = Double(club.longitude)
+            
+        }
     }
 }

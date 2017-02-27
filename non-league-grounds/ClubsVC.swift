@@ -26,7 +26,9 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         
-        leagueLbl.text = league.leagueName
+//        leagueLbl.text = league.leagueName
+        
+        self.navigationItem.title = league.leagueName
         
         
         DataService.ds.REF_BASE.child("clubs").queryOrdered(byChild: "leagueKey").queryEqual(toValue: league.leagueKey).observe(.value, with: { (snapshot) in
