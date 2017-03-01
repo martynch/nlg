@@ -16,6 +16,7 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var league: Leagues!
     var clubs = [Clubs]()
+    var players = [Players]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 
 //               print("CLUBS: \(snapshot.key)")
 //               print("CLUBS: \(self.clubs)")
-//                print("CLUBS: \(self.clubs.count)")
+//                print("CLUBS: \(self.clubs.count)"
                 
                 for snap in snapshots {
                     if let clubDict = snap.value as? Dictionary<String, AnyObject> {
@@ -87,6 +88,7 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if let detailVC = segue.destination as? ClubDetailsVC { // To Destination from Here
             if let club = sender as? Clubs { // sender Class
                 detailVC.club = club

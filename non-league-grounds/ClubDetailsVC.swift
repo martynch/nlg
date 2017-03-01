@@ -25,11 +25,10 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var postCodeLbl: UILabel!
     @IBOutlet weak var clubCrest: UIImageView!
     var club: Clubs!
+    var players: Players!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.navigationItem.title = club.clubName
         
         groundLbl.text = club.groundName
         chairmanLbl.text = club.chairman
@@ -142,6 +141,7 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
             
             let destVC :MatchDayVC = segue.destination as! MatchDayVC
             destVC.clubName = club.clubName
+        
             
         } else if (segue.identifier == "ClubLocationVC") {
             
@@ -152,6 +152,10 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
             destVC.latitude = club.latitude
             destVC.longitude = Double(club.longitude)
             
+        } else if (segue.identifier == "TeamSelection") {
+            let destVC :TeamSelection = segue.destination as! TeamSelection
+            
+            destVC.clubName = club.clubKey
         }
     }
 }

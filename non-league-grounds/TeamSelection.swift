@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import Firebase
+
+
 
 class TeamSelection: UIViewController {
+    
+    var player = [Players]()
+    var club = [Clubs]()
+    var clubName = String()
+    var playerFirstName = String()
+    var playerLastName = String()
+
     
     @IBOutlet var Player: [UIView]!
     
@@ -16,6 +26,26 @@ class TeamSelection: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
+        DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerLastName").observe(.value, with: { (snapshot) in
+            
+            self.player = []
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                
+                print(snapshot)
+                
+                for snap in snapshot {
+                    if let playerDict = snap.value as? Dictionary<String, Any> {
+                        let key = snap.key
+                        let players = Players(playerKey: key, dictionary: playerDict)
+                        self.player.append(players)
+                        
+                        print(self.Player.count)
+                    }
+                }
+            }
+//            self.tableView.reloadData()
+        })       
     }
 }
 

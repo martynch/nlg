@@ -12,10 +12,12 @@ class MatchDayVC: UIViewController {
     
     var clubName = String ()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = clubName
+        print(clubName)
         
     }
 

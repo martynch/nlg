@@ -29,6 +29,7 @@
 		5A071C851DF5CED700A3D7C1 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C811DF5CED700A3D7C1 /* NotoSans-Italic.ttf */; };
 		5A071C861DF5CED700A3D7C1 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */; };
 		5A09F8551E4B74F800F28CF1 /* StopWatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09F8541E4B74F800F28CF1 /* StopWatchVC.swift */; };
+		5A0C5B4D1E6499B900770534 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C5B4C1E6499B900770534 /* Players.swift */; };
 		5A0D55A41E08354A00555C14 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559B1E08354A00555C14 /* GeoFire.m */; };
 		5A0D55A51E08354A00555C14 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559D1E08354A00555C14 /* GFBase32Utils.m */; };
 		5A0D55A61E08354A00555C14 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559F1E08354A00555C14 /* GFGeoHash.m */; };
@@ -70,6 +71,7 @@
 		5A071C811DF5CED700A3D7C1 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		5A09F8541E4B74F800F28CF1 /* StopWatchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchVC.swift; sourceTree = "<group>"; };
+		5A0C5B4C1E6499B900770534 /* Players.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		5A0D55941E08354A00555C14 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
 		5A0D55951E08354A00555C14 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
 		5A0D55961E08354A00555C14 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				5A071C6D1DF5CC8000A3D7C1 /* Leagues.swift */,
 				5A071C6F1DF5CCB000A3D7C1 /* Clubs.swift */,
 				5A0D55AC1E0861D900555C14 /* ClubLocation.swift */,
+				5A0C5B4C1E6499B900770534 /* Players.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				5A6DC1741E16BF2200CD87EC /* burgerVC.swift in Sources */,
 				5AE5F9601E02E6BE00554191 /* RoundedCorners.swift in Sources */,
 				5A6DC1721E16A91E00CD87EC /* SWRevealViewController.m in Sources */,
+				5A0C5B4D1E6499B900770534 /* Players.swift in Sources */,
 				5A071C761DF5CD7900A3D7C1 /* ClubCell.swift in Sources */,
 				5A071C7A1DF5CDE600A3D7C1 /* MatiralView.swift in Sources */,
 				5A148C891E48E398006840CC /* MatchDayVC.swift in Sources */,

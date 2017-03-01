@@ -15,6 +15,7 @@ let STORAGE_BASE = FIRStorage.storage().reference()
 
 public var LEAGUE_KEY: String!
 private var CLUB_KEY: String!
+public var PLAYER_KEY: String!
 
 
 class DataService {
@@ -23,9 +24,11 @@ class DataService {
     private var _REF_BASE = DB_BASE
     private var _REF_LEAGUES = DB_BASE.child("leagues")
     private var _REF_CLUBS = DB_BASE.child("clubs")
+    private var _REF_PLAYERS = DB_BASE.child("player")
     
     private var _REF_LEAGUE_Images = STORAGE_BASE.child("league-crest")
     private var _REF_TEAM_IMAGES = STORAGE_BASE.child("team-crest")
+    
     
     var REF_BASE: FIRDatabaseReference {
         return _REF_BASE
@@ -37,6 +40,10 @@ class DataService {
     
     var REF_CLUBS: FIRDatabaseReference {
         return _REF_CLUBS
+    }
+    
+    var REF_PLAYERS: FIRDatabaseReference {
+        return _REF_PLAYERS
     }
     
     var REF_TEAM__IMAGES: FIRStorageReference {
