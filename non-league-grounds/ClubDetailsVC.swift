@@ -145,7 +145,7 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
             
         } else if (segue.identifier == "ClubLocationVC") {
             
-            let destVC :ClubLocationVC = segue.destination as! ClubLocationVC
+            let destVC: ClubLocationVC = segue.destination as! ClubLocationVC
             
             destVC.pinTitle = club.clubName
             destVC.pinSubTitle = club.groundName
@@ -153,7 +153,7 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
             destVC.longitude = Double(club.longitude)
             
         } else if (segue.identifier == "TeamSelection") {
-            let destVC :TeamSelection = segue.destination as! TeamSelection
+            let destVC: TeamSelection = segue.destination as! TeamSelection
             
             destVC.clubName = club.clubKey
         }

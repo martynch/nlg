@@ -26,6 +26,9 @@ class TeamSelection: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.navigationItem.title = clubName
+        
     
         DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerLastName").observe(.value, with: { (snapshot) in
             

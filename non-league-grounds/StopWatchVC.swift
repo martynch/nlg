@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Social
 
 class StopWatchVC: UIViewController {
 
+    
     var laps: [String] = []
     var halfTime: [String] = []
+    var clubName = String ()
+    var stopWatch = Stopwatch()
     var timer = Timer()
     var minutes: Int = 0
     var seconds: Int = 0
@@ -49,7 +53,6 @@ class StopWatchVC: UIViewController {
     var extraTimeButtonButtonCenter: CGPoint!
     var secondHalfEndedButtonCenter: CGPoint!
     var firstHalfEndedButtonCenter: CGPoint!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,19 +119,19 @@ class StopWatchVC: UIViewController {
                 self.endSecondHalf.center = self.secondHalfEndedButtonCenter
                 self.endFirstHalf.center = self.firstHalfEndedButtonCenter
                 
-                if self.seconds > 1 && self.minutes < 42 {
-                    self.firstHalf.alpha = 0.2
-                    self.secondHalf.alpha = 0.2
-                    self.endFirstHalf.alpha = 0.2
-                    self.endSecondHalf.alpha = 0.2
-                } else {
-                    if self.minutes > 42 && self.minutes < 50 {
-                        self.firstHalf.alpha = 1
-                        self.secondHalf.alpha = 0.2
-                        self.endFirstHalf.alpha = 1
-                        self.endSecondHalf.alpha = 0.2
-                    }
-                }
+//                if self.seconds > 1 && self.minutes < 10 {
+//                    self.firstHalf.alpha = 0.2
+//                    self.secondHalf.alpha = 0.2
+//                    self.endFirstHalf.alpha = 0.2
+//                    self.endSecondHalf.alpha = 0.2
+//                } else {
+//                    if self.minutes > 42 && self.minutes < 50 {
+//                        self.firstHalf.alpha = 1
+//                        self.secondHalf.alpha = 0.2
+//                        self.endFirstHalf.alpha = 1
+//                        self.endSecondHalf.alpha = 0.2
+//                    }
+//                }
             })
         } else {
             UIView.animate(withDuration: 0.3, animations: {
@@ -165,31 +168,41 @@ class StopWatchVC: UIViewController {
         if startStopWatch == true {
             timerStart()
             startStopWatch = false
-            endFirstHalf.isEnabled = false
-            endSecondHalf.isEnabled = false
-            self.firstHalf.alpha = 0.2
-            self.secondHalf.alpha = 0.2
-            self.endFirstHalf.alpha = 0.2
-            self.endSecondHalf.alpha = 0.2
+//            endFirstHalf.isEnabled = false
+//            endSecondHalf.isEnabled = false
+//            self.firstHalf.alpha = 0.2
+//            self.secondHalf.alpha = 0.2
+//            self.endFirstHalf.alpha = 0.2
+//            self.endSecondHalf.alpha = 0.2
             seconds = 0
             minutes = 0
-            tempTimelineLbl.text = "Kick Off here at "
+
+            
+//            let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//            vc?.setInitialText("\("Kick off here at")  \(clubName)")
+//            vc?.add(#imageLiteral(resourceName: "start-1st"))
+//            present(vc!, animated: true, completion: nil)
+            
         }
     }
     
     @IBAction func endFirstHalfClicked(_ sender: UIButton) {
         
         if startStopWatch == false {
-            endFirstHalf.isEnabled = true
+//            endFirstHalf.isEnabled = true
             timer.invalidate()
             startStopWatch = true
             seconds = 0
             minutes = 45
             stopwatchLabel.text = "45:00"
-            tempTimelineLbl.text = "Half Time"
-            self.secondHalf.alpha = 1
-            self.firstHalf.alpha = 0.2
-            self.endFirstHalf.alpha = 0.2
+//            self.secondHalf.alpha = 1
+//            self.firstHalf.alpha = 0.2
+//            self.endFirstHalf.alpha = 0.2
+            
+//            let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//            vc?.setInitialText("Half Time")
+//            vc?.add(#imageLiteral(resourceName: "end-1st"))
+//            present(vc!, animated: true, completion: nil)
         }
     }
     
@@ -199,85 +212,119 @@ class StopWatchVC: UIViewController {
             timerStart()
             seconds = 0
             minutes = 45
-            endSecondHalf.isEnabled = false
-            endFirstHalf.isEnabled = false
-            self.secondHalf.alpha = 0.2
+//            endSecondHalf.isEnabled = false
+//            endFirstHalf.isEnabled = false
+//            self.secondHalf.alpha = 0.2
             startStopWatch = false
             tempTimelineLbl.text = "2nd Half Underway"
+            
+//            let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//            vc?.setInitialText("2nd Half Underway")
+//            vc?.add(#imageLiteral(resourceName: "start-2nd"))
+//            present(vc!, animated: true, completion: nil)
         }
     }
     
     @IBAction func endSecondHalfClicked(_ sender: UIButton) {
         
         if startStopWatch == false {
-            endSecondHalf.isEnabled = true
-            self.endSecondHalf.alpha = 1
+//            endSecondHalf.isEnabled = true
+//            self.endSecondHalf.alpha = 1
             timer.invalidate()
             startStopWatch = true
             seconds = 0
             minutes = 0
             stopwatchLabel.text = "90:00"
             tempTimelineLbl.text = "Full Time"
+            
+//            let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//            vc?.setInitialText("Full Time")
+//            vc?.add(#imageLiteral(resourceName: "end-2nd"))
+//            present(vc!, animated: true, completion: nil)
         }
     }
     
     @IBAction func goalClicked(_ sender: UIButton) {
         
-        tempTimelineLbl.text = "\(stopWatchString)'  \("Goal for")"
+//        let stopWatchString = stopWatch.elapsedTimeSinceStart()
+//        stopwatchLabel.text = stopWatchString
+//        
+//        let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//        vc?.setInitialText("\(stopWatchString)'  \("Goal for") ")
+//        vc?.add(#imageLiteral(resourceName: "goal"))
+//        present(vc!, animated: true, completion: nil)
+        
     }
     
     @IBAction func yellowClicked(_ sender: UIButton) {
         
-        tempTimelineLbl.text = "\(stopWatchString)'  \("Yellow Card for")"
+//        let stopWatchString = stopWatch.elapsedTimeSinceStart()
+//        stopwatchLabel.text = stopWatchString
+//        
+//        let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//        vc?.setInitialText("\(stopWatchString)'  \("Yellow Card for") ")
+//        vc?.add(#imageLiteral(resourceName: "yellow"))
+//        present(vc!, animated: true, completion: nil)
     }
     
     @IBAction func secondBookableClicked(_ sender: UIButton) {
         
-        tempTimelineLbl.text = "\(stopWatchString)'  \("Second Bookable for")"
+//        let stopWatchString = stopWatch.elapsedTimeSinceStart()
+//        stopwatchLabel.text = stopWatchString
+//        
+//        let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//        vc?.setInitialText("\(stopWatchString)'  \("Second Bookable for") ")
+//        vc?.add(#imageLiteral(resourceName: "2nd-yellow"))
+//        present(vc!, animated: true, completion: nil)
     }
     
     @IBAction func redCardClicked(_ sender: UIButton) {
         
-        tempTimelineLbl.text = "\(stopWatchString)'  \("Striaght Red for")"
+//        let stopWatchString = stopWatch.elapsedTimeSinceStart()
+//        stopwatchLabel.text = stopWatchString
+//        
+//        let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//        vc?.setInitialText("\(stopWatchString)'  \("Striaght Red for") ")
+//        vc?.add(#imageLiteral(resourceName: "red"))
+//        present(vc!, animated: true, completion: nil)
+        
     }
 
     @IBAction func subClicked(_ sender: UIButton) {
+        
+//        let stopWatchString = stopWatch.elapsedTimeSinceStart()
+//        stopwatchLabel.text = stopWatchString
+//        
+//        let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//        vc?.setInitialText("\(stopWatchString)'  \("Substitution for") ")
+//        vc?.add(#imageLiteral(resourceName: "sub"))
+//        present(vc!, animated: true, completion: nil)
         
         tempTimelineLbl.text = "\(stopWatchString)'  \("Substitution for")"
     }
     
     func timerStart() {
+        
+        minutes = 45
+        stopWatch.startTimer();
+        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(StopWatchVC.updateStopwatch), userInfo: nil, repeats: true)
     }
     
     func updateStopwatch() {
         
-        seconds  += 1
-        if seconds == 60 {
-            minutes += 1
-            seconds = 0
-        }
-        
-        let secondsString = seconds > 9 ? "\(seconds)" : "0\(seconds)"
-        let minutesString = minutes > 9 ? "\(minutes)" : "\(minutes)"
-        
-        stopWatchString = "\(minutesString):\(secondsString)"
+        let stopWatchString = stopWatch.elapsedTimeSinceStart()
         stopwatchLabel.text = stopWatchString
         
-        if minutes > 43 {
-            endFirstHalf.isEnabled = true
-            self.endFirstHalf.alpha = 1
-        }
-        
-        if minutes > 45 {
-            endFirstHalf.isEnabled = false
-            
-        }
-        
-        if minutes > 87 {
-            endSecondHalf.isEnabled = true
-            self.endSecondHalf.alpha = 1
-        }
+//        if minutes > 1 {
+//            endFirstHalf.isEnabled = true
+//            self.endFirstHalf.alpha = 1
+//        }
+//
+//        if minutes > 87 {
+//            endSecondHalf.isEnabled = true
+//            self.endSecondHalf.alpha = 1
+//        }
     }
     
     func updateCountDown() {
