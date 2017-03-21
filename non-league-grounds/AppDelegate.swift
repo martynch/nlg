@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 
+var firstHalfTime = true
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

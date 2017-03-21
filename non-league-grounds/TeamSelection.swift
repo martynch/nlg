@@ -10,11 +10,12 @@ import UIKit
 import Firebase
 
 
-
 class TeamSelection: UIViewController {
     
+//    var player: Players!
     var player = [Players]()
-    var club = [Clubs]()
+    var club: Clubs!
+//    var club = [Clubs]()
     var clubName = String()
     var playerFirstName = String()
     var playerLastName = String()
@@ -22,20 +23,30 @@ class TeamSelection: UIViewController {
     
     @IBOutlet var Player: [UIView]!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        CLUB_KEY = ""
+        CLUB_KEY = club.clubKey
         
         
         self.navigationItem.title = clubName
         
+        DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerLastName").queryEqual(toValue: club.clubKey).observe(.value, with: { (snapshot) in
+        
     
-        DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerLastName").observe(.value, with: { (snapshot) in
+//        DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerLastName").observe(.value, with: { (snapshot) in
             
             self.player = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
                 print(snapshot)
+                
+//                print("PLAYERS: \(snapshot.key)")
+                print("PLAYERS: \(self.player)")
+                print("PLAYERS: \(self.playerLastName)")
+                print("PLAYERS: \(self.player.count)")
+
                 
                 for snap in snapshot {
                     if let playerDict = snap.value as? Dictionary<String, Any> {

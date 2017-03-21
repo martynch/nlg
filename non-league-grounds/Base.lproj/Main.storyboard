@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fv7-en-0Oz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fv7-en-0Oz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -471,24 +471,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temp Label For Status Checking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpP-yR-WJ5">
-                                <rect key="frame" x="16" y="209" width="343" height="70"/>
+                                <rect key="frame" x="16" y="158" width="343" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="45:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJm-3h-KHA">
-                                <rect key="frame" x="20" y="323" width="339" height="70"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VOL-yM-YXQ">
+                                <rect key="frame" x="16" y="236" width="343" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="etk-kd-78O">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="etk-kd-78O" id="dvs-KG-oaO">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.83174315939999999" green="1" blue="0.87253737890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="counterLbl" destination="JJm-3h-KHA" id="e9Y-gT-NbO"/>
                         <outlet property="endFirstHalf" destination="JSF-Xw-j5Y" id="K4p-E6-sJd"/>
                         <outlet property="endSecondHalf" destination="bSW-SG-hbI" id="nEm-1F-GhB"/>
                         <outlet property="extraTime" destination="lo1-iJ-FRc" id="vnQ-dM-8kq"/>
@@ -563,11 +571,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pitch" translatesAutoresizingMaskIntoConstraints="NO" id="GDP-X2-KRX">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pitch" translatesAutoresizingMaskIntoConstraints="NO" id="mag-hy-nsa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="414"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VAA-PM-i5f" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
-                                <rect key="frame" x="283" y="462" width="76" height="78"/>
+                                <rect key="frame" x="283" y="294" width="76" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="BFw-6O-SyH">
@@ -584,7 +592,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-NX-WTQ" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
-                                <rect key="frame" x="197" y="462" width="76" height="78"/>
+                                <rect key="frame" x="199" y="294" width="76" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obx-Eb-JD8">
@@ -601,7 +609,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pe9-mE-nf0" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
-                                <rect key="frame" x="20" y="462" width="76" height="78"/>
+                                <rect key="frame" x="20" y="294" width="76" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="GEU-Bt-wCJ">
@@ -618,7 +626,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IsF-du-hGC" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
-                                <rect key="frame" x="107" y="462" width="76" height="78"/>
+                                <rect key="frame" x="104" y="294" width="76" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="B6h-IM-zag">
@@ -635,7 +643,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEE-ko-Abe" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
-                                <rect key="frame" x="197" y="299" width="76" height="78"/>
+                                <rect key="frame" x="197" y="194" width="76" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Yb4-NJ-Mcz">
@@ -652,7 +660,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Nx-k5-uZ8" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
-                                <rect key="frame" x="283" y="299" width="76" height="78"/>
+                                <rect key="frame" x="283" y="194" width="76" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-c9-UHo">
@@ -669,7 +677,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xiy-L7-8ri" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
-                                <rect key="frame" x="15" y="299" width="76" height="78"/>
+                                <rect key="frame" x="20" y="194" width="76" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PdK-xy-IVh">
@@ -686,7 +694,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOh-tV-VlV" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
-                                <rect key="frame" x="106" y="299" width="76" height="78"/>
+                                <rect key="frame" x="113" y="194" width="76" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-mg-gyd">
@@ -719,23 +727,6 @@
                                     </imageView>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGk-ef-kro" userLabel="Keeper" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
-                                <rect key="frame" x="149" y="549" width="76" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="iGi-ha-4z8">
-                                        <rect key="frame" x="0.0" y="57" width="76" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="keeper " translatesAutoresizingMaskIntoConstraints="NO" id="k1C-Zb-NeG">
-                                        <rect key="frame" x="3" y="0.0" width="70" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ScD-jX-KaA" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
                                 <rect key="frame" x="54" y="91" width="76" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -753,13 +744,30 @@
                                     </imageView>
                                 </subviews>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGk-ef-kro" userLabel="Keeper" customClass="DraggableView" customModule="non_league_grounds" customModuleProvider="target">
+                                <rect key="frame" x="149" y="400" width="76" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="iGi-ha-4z8">
+                                        <rect key="frame" x="0.0" y="57" width="76" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="keeper " translatesAutoresizingMaskIntoConstraints="NO" id="k1C-Zb-NeG">
+                                        <rect key="frame" x="3" y="0.0" width="70" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GDP-X2-KRX" firstAttribute="top" secondItem="XEm-hg-gHf" secondAttribute="top" constant="64" id="H3J-u4-Fx8"/>
-                            <constraint firstItem="Otp-dk-fzv" firstAttribute="top" secondItem="GDP-X2-KRX" secondAttribute="bottom" id="M8h-4g-MQi"/>
-                            <constraint firstItem="GDP-X2-KRX" firstAttribute="leading" secondItem="XEm-hg-gHf" secondAttribute="leading" id="a9f-OY-D0h"/>
-                            <constraint firstAttribute="trailing" secondItem="GDP-X2-KRX" secondAttribute="trailing" id="usc-sm-Bgi"/>
+                            <constraint firstItem="mag-hy-nsa" firstAttribute="leading" secondItem="XEm-hg-gHf" secondAttribute="leading" id="PI3-Gp-GjX"/>
+                            <constraint firstItem="mag-hy-nsa" firstAttribute="top" secondItem="Qig-zr-j4g" secondAttribute="bottom" id="Shk-9r-znP"/>
+                            <constraint firstItem="Otp-dk-fzv" firstAttribute="top" secondItem="mag-hy-nsa" secondAttribute="bottom" constant="145" id="V8A-tY-blY"/>
+                            <constraint firstAttribute="trailing" secondItem="mag-hy-nsa" secondAttribute="trailing" id="vXb-9e-IBU"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -770,7 +778,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIz-ag-1lO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192.8" y="2602.8485757121443"/>
+            <point key="canvasLocation" x="1192.8" y="2606.4467766116945"/>
         </scene>
         <!--Club LocationVC-->
         <scene sceneID="dEO-wc-sWh">
@@ -837,13 +845,13 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-yv-Qva" userLabel="Combined Stack View">
-                                <rect key="frame" x="60" y="72" width="256" height="115"/>
+                                <rect key="frame" x="60" y="72" width="256" height="117"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyk-hO-k31" userLabel="Registered Stack View">
-                                        <rect key="frame" x="52.5" y="0.0" width="151.5" height="55"/>
+                                        <rect key="frame" x="52" y="0.0" width="152" height="56"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCe-q8-BVS">
-                                                <rect key="frame" x="0.0" y="0.0" width="151.5" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="56"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="30"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -852,19 +860,19 @@
                                         <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lZP-yb-0Zn" userLabel="Count Stack View">
-                                        <rect key="frame" x="55" y="60" width="146.5" height="55"/>
+                                        <rect key="frame" x="55" y="61" width="147" height="56"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ1-jz-UNJ" userLabel="Leagues Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="79" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leagues" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-uM-8DN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="27.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="28"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsd-FT-qCu">
-                                                        <rect key="frame" x="33.5" y="27.5" width="11.5" height="27.5"/>
+                                                        <rect key="frame" x="33" y="28" width="12" height="28"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -873,16 +881,16 @@
                                                 <variation key="heightClass=regular-widthClass=compact" alignment="center" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z26-Y7-Bed" userLabel="Clubs Stack View">
-                                                <rect key="frame" x="94" y="0.0" width="52.5" height="55"/>
+                                                <rect key="frame" x="94" y="0.0" width="53" height="56"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clubs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WS-KY-ukT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="27.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="53" height="28"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2M-6u-hr7">
-                                                        <rect key="frame" x="0.0" y="27.5" width="52.5" height="27.5"/>
+                                                        <rect key="frame" x="0.0" y="28" width="53" height="28"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1053,7 +1061,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hQh-uB-man" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RQt-Gl-YUB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RQt-Gl-YUB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

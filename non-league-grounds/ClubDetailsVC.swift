@@ -154,8 +154,7 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
             
         } else if (segue.identifier == "TeamSelection") {
             let destVC: TeamSelection = segue.destination as! TeamSelection
-            
-            destVC.clubName = club.clubKey
+            destVC.clubName = club.clubName
         }
     }
 }

@@ -14,7 +14,7 @@ let STORAGE_BASE = FIRStorage.storage().reference()
 
 
 public var LEAGUE_KEY: String!
-private var CLUB_KEY: String!
+public var CLUB_KEY: String!
 public var PLAYER_KEY: String!
 
 
