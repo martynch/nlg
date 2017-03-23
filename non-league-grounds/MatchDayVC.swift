@@ -11,28 +11,25 @@ import UIKit
 class MatchDayVC: UIViewController {
     
     var clubName = String ()
+    var club: Clubs!
+    
+    @IBOutlet var teamSelectionBtn: UIButton!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = clubName
-        print(clubName)
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        print(club.clubName)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "StopWatchVC") {
             let destVC: StopWatchVC = segue.destination as! StopWatchVC
             destVC.clubName = clubName
+            
         } else if (segue.identifier == "TeamSelection") {
             let destVC: TeamSelection = segue.destination as! TeamSelection
-            destVC.clubName = clubName
+            destVC.club = club
         }
     }
 }

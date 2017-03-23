@@ -18,18 +18,18 @@ class LeaguesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationItem.title = "LEAGUES"
-        
         tableView.dataSource = self
         tableView.delegate = self
         
         DataService.ds.REF_LEAGUES.queryOrdered(byChild: "leagueName").observe(.value, with: { (snapshot) in
             
+//            print(snapshot.value ?? "Nothing to see")
+//            print("CHET: \(snapshot.childrenCount)")
 
             self.leagues = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
-//                print(snapshot)
+//               print(snapshot)
                 
                 for snap in snapshot {
                     if let leagueDict = snap.value as? Dictionary<String, Any> {

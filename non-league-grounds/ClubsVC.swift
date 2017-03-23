@@ -37,11 +37,10 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             self.clubs = []
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
-                print(snapshot)
                 
 //               print("CLUBS: \(snapshot.key)")
 //               print("CLUBS: \(self.clubs)")
-//               print("CLUBS: \(self.clubs.count)")
+//               print("CLUBSCOUNT: \(self.clubs.count)")
                 
                 for snap in snapshots {
                     if let clubDict = snap.value as? Dictionary<String, AnyObject> {
@@ -49,6 +48,7 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
                         let clubs = Clubs(clubKey: key, dictionary: clubDict)
                         self.clubs.append(clubs)
+
                     } 
                 }
             }

@@ -9,7 +9,7 @@
 import UIKit
 import Social
 
-class StopWatchVC: UIViewController {
+class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     var events: [String] = []
@@ -36,6 +36,7 @@ class StopWatchVC: UIViewController {
     @IBOutlet weak var endSecondHalf: UIButton!
     @IBOutlet weak var endFirstHalf: UIButton!
     @IBOutlet weak var tempTimelineLbl: UILabel!
+    @IBOutlet weak var tableView: UITableView!
 
     
     @IBOutlet weak var stopwatchLabel: UILabel!
@@ -148,6 +149,27 @@ class StopWatchVC: UIViewController {
         toggleButton(button: sender, onImage: #imageLiteral(resourceName: "more_on"), offImage: #imageLiteral(resourceName: "more_off"))
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
+        
+        cell.backgroundColor = self.view.backgroundColor
+        
+        cell.textLabel?.text = "How to get event"
+        cell.detailTextLabel?.text = events[indexPath.row]
+        
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return events.count
+    }
+    
+    
+    
+    
     @IBAction func firstHalfClicked(_ sender: UIButton) {
         
         if startStopWatch == true {
@@ -180,6 +202,7 @@ class StopWatchVC: UIViewController {
 //            vc?.add(#imageLiteral(resourceName: "end-1st"))
             present(vc!, animated: true, completion: nil)
         }
+        
     }
     
     @IBAction func secondHalfClicked(_ sender: UIButton) {
@@ -222,6 +245,12 @@ class StopWatchVC: UIViewController {
         
         let stopWatchString = stopWatch.elapsedTimeSinceStart()
         stopwatchLabel.text = stopWatchString
+        
+        events.insert(stopWatchString, at: 0)
+
+        self.tableView.reloadData()
+        
+        print(stopWatchString)
         
         let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         vc?.setInitialText("\(stopWatchString)'  \("Goal for") ")

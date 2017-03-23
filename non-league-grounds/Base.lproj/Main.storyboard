@@ -481,17 +481,10 @@
                                 <rect key="frame" x="16" y="236" width="343" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="etk-kd-78O">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="etk-kd-78O" id="dvs-KG-oaO">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" red="0.83174315939999999" green="1" blue="0.87253737890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OMs-qm-7sa" id="E2i-7A-vPz"/>
+                                    <outlet property="delegate" destination="OMs-qm-7sa" id="lDQ-Tm-xxr"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -508,6 +501,7 @@
                         <outlet property="secondYellow" destination="nE5-1f-H42" id="haC-9p-Pb4"/>
                         <outlet property="stopwatchLabel" destination="Igb-BE-PhX" id="rx2-MK-4D1"/>
                         <outlet property="sub" destination="gAC-EQ-qjb" id="J4f-Zo-T9I"/>
+                        <outlet property="tableView" destination="VOL-yM-YXQ" id="OKU-ei-GRf"/>
                         <outlet property="tempTimelineLbl" destination="qpP-yR-WJ5" id="1bd-az-cl6"/>
                         <outlet property="yellow" destination="duZ-FQ-rqy" id="a2W-nK-YfO"/>
                     </connections>
@@ -845,13 +839,13 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-yv-Qva" userLabel="Combined Stack View">
-                                <rect key="frame" x="60" y="72" width="256" height="117"/>
+                                <rect key="frame" x="60" y="72" width="256" height="115"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyk-hO-k31" userLabel="Registered Stack View">
-                                        <rect key="frame" x="52" y="0.0" width="152" height="56"/>
+                                        <rect key="frame" x="52.5" y="0.0" width="151.5" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCe-q8-BVS">
-                                                <rect key="frame" x="0.0" y="0.0" width="152" height="56"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="151.5" height="55"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="30"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -860,19 +854,19 @@
                                         <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lZP-yb-0Zn" userLabel="Count Stack View">
-                                        <rect key="frame" x="55" y="61" width="147" height="56"/>
+                                        <rect key="frame" x="55" y="60" width="146.5" height="55"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ1-jz-UNJ" userLabel="Leagues Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="79" height="56"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leagues" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-uM-8DN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="27.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsd-FT-qCu">
-                                                        <rect key="frame" x="33" y="28" width="12" height="28"/>
+                                                        <rect key="frame" x="33.5" y="27.5" width="11.5" height="27.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -881,16 +875,16 @@
                                                 <variation key="heightClass=regular-widthClass=compact" alignment="center" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z26-Y7-Bed" userLabel="Clubs Stack View">
-                                                <rect key="frame" x="94" y="0.0" width="53" height="56"/>
+                                                <rect key="frame" x="94" y="0.0" width="52.5" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clubs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WS-KY-ukT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="27.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2M-6u-hr7">
-                                                        <rect key="frame" x="0.0" y="28" width="53" height="28"/>
+                                                        <rect key="frame" x="0.0" y="27.5" width="52.5" height="27.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1061,7 +1055,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hQh-uB-man" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RQt-Gl-YUB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RQt-Gl-YUB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

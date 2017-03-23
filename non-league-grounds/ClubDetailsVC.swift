@@ -30,6 +30,9 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = club.clubName
+        print(club.clubName)
+        
         groundLbl.text = club.groundName
         chairmanLbl.text = club.chairman
         address1Lbl.text = club.address1
@@ -140,7 +143,8 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
         if (segue.identifier == "MatchDayVC") {
             
             let destVC :MatchDayVC = segue.destination as! MatchDayVC
-            destVC.clubName = club.clubName
+//            destVC.clubName = club.clubName
+            destVC.club = club
         
             
         } else if (segue.identifier == "ClubLocationVC") {
@@ -154,7 +158,7 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
             
         } else if (segue.identifier == "TeamSelection") {
             let destVC: TeamSelection = segue.destination as! TeamSelection
-            destVC.clubName = club.clubName
+            destVC.club = club
         }
     }
 }
