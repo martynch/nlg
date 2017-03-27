@@ -16,14 +16,14 @@ class Players {
     
     var playerFirstName: String {
         if _playerFirstName == nil {
-            _playerFirstName = "First"
+            _playerFirstName = ""
         }
         return _playerLastName
     }
     
     var playerLastName: String {
         if _playerLastName == nil {
-            _playerLastName = "Last"
+            _playerLastName = ""
         }
         return _playerLastName
     }
@@ -35,13 +35,13 @@ class Players {
         return _playerKey
     }
     
-    init(playerFirstName: String, dictionary: Dictionary<String, Any>) {
-        self._playerFirstName = playerFirstName
+//    init(playerFirstName: String, dictionary: Dictionary<String, Any>) {
+//        self._playerFirstName = playerFirstName
         
-        if let playerFirstName = dictionary["player"] as? String {
-            self._playerFirstName = playerFirstName
-        }
-    }
+//        if let playerFirstName = dictionary["player"] as? String {
+//            self._playerFirstName = playerFirstName
+//        }
+//    }
     
     init(playerKey: String, dictionary: Dictionary<String, Any>) {
         self._playerKey = playerKey

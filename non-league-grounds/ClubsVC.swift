@@ -32,15 +32,12 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.navigationItem.title = league.leagueName
         
         
-        DataService.ds.REF_BASE.child("clubs").queryOrdered(byChild: "leagueKey").queryEqual(toValue: league.leagueKey).observe(.value, with: { (snapshot) in
+        DataService.ds.REF_CLUBS.queryOrdered(byChild: "leagueKey").queryEqual(toValue: league.leagueKey).observe(.value, with: { (snapshot) in
             
             self.clubs = []
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
-                
-//               print("CLUBS: \(snapshot.key)")
-//               print("CLUBS: \(self.clubs)")
-//               print("CLUBSCOUNT: \(self.clubs.count)")
+                print(snapshot.key)
                 
                 for snap in snapshots {
                     if let clubDict = snap.value as? Dictionary<String, AnyObject> {
@@ -48,7 +45,6 @@ class ClubsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
                         let clubs = Clubs(clubKey: key, dictionary: clubDict)
                         self.clubs.append(clubs)
-
                     } 
                 }
             }

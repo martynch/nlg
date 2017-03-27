@@ -139,13 +139,13 @@ class Clubs {
         return _twitter!
     }
     
-    init(clubName: String, dictionary: Dictionary<String, Any>) {
-        self._clubName = clubName
+// init(clubName: String, dictionary: Dictionary<String, Any>) {
+//        self._clubName = clubName
         
-        if let clubName = dictionary["clubs"] as? String {
-            self._clubName = clubName
-        }
-    }
+//        if let clubName = dictionary["clubs"] as? String {
+//            self._clubName = clubName
+//        }
+//    }
     
   
     // convert data to dictionary

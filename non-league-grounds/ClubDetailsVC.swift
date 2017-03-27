@@ -31,7 +31,6 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
         super.viewDidLoad()
         
         self.navigationItem.title = club.clubName
-        print(club.clubName)
         
         groundLbl.text = club.groundName
         chairmanLbl.text = club.chairman

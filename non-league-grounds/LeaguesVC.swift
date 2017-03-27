@@ -23,14 +23,9 @@ class LeaguesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         DataService.ds.REF_LEAGUES.queryOrdered(byChild: "leagueName").observe(.value, with: { (snapshot) in
             
-//            print(snapshot.value ?? "Nothing to see")
-//            print("CHET: \(snapshot.childrenCount)")
-
             self.leagues = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                
-//               print(snapshot)
-                
+                                
                 for snap in snapshot {
                     if let leagueDict = snap.value as? Dictionary<String, Any> {
                         let key = snap.key

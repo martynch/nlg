@@ -29,32 +29,27 @@ class TeamSelection: UIViewController {
         
         
         self.navigationItem.title = club.clubName
-//        print(club.clubName)
         
-        DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerLastName").queryEqual(toValue: club.clubKey).observe(.value, with: { (snapshot) in
+        DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerKey").queryEqual(toValue: club.clubKey).observe(.value, with: { (snapshot) in
         
     
-//        DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerLastName").observe(.value, with: { (snapshot) in
+//       DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerLastName").observe(.value, with: { (snapshot) in
             
-            
-            print(snapshot.value ?? "Nothing to see")
-//            print("PLAYERS: \(snapshot.childrenCount)")
+        print("PLAYERS_CHILDREN: \(snapshot.children)")
+        print("PLAYERS_KEY: \(snapshot.key)")
+        print("PLAYERS_REF \(snapshot.ref)")
+        print("PLAYERS_LASTNAME: \(self.playerLastName)")
+        print("PLAYERS_COUNT: \(snapshot.childrenCount)")
+        print("PLAYERS_SNAPSHOT: \(snapshot)")
 
             
             self.player = []
-            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
-//                print(snapshot)
-                
-//                print("PLAYERS: \(snapshot.key)")
-//                print("PLAYERS: \(self.player)")
-//                print("PLAYERS: \(self.playerLastName)")
-//                print("PLAYERS: \(self.player.count)")
-
-                
-                for snap in snapshot {
-                    if let playerDict = snap.value as? Dictionary<String, Any> {
+                for snap in snapshots {
+                    if let playerDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
+                        
                         let players = Players(playerKey: key, dictionary: playerDict)
                         self.player.append(players)
                         
@@ -62,7 +57,10 @@ class TeamSelection: UIViewController {
                 }
             }
 //            self.tableView.reloadData()
-        })       
+        }) { (error) in
+            print(error.localizedDescription)
+            print("CHET: local error")
+        }
     }
 }
 

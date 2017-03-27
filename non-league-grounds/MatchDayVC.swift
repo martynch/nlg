@@ -19,7 +19,6 @@ class MatchDayVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(club.clubName)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
