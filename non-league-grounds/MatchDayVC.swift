@@ -13,8 +13,8 @@ class MatchDayVC: UIViewController {
     var clubName = String ()
     var club: Clubs!
     
+    
     @IBOutlet var teamSelectionBtn: UIButton!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

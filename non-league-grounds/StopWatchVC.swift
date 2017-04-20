@@ -11,14 +11,14 @@ import Social
 
 class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
-    var events: [String] = []
+    var event: [Any] = []
+    var time: [String] = []
     var halfTime: [String] = []
     var clubName = String ()
     var stopWatch = Stopwatch()
     var timer = Timer()
     
-    var countDown = 45
+    var countDown = 2700
     var countDownString: String = ""
     var stopWatchString: String = ""
     var startStopWatch: Bool = true
@@ -36,10 +36,13 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var endSecondHalf: UIButton!
     @IBOutlet weak var endFirstHalf: UIButton!
     @IBOutlet weak var tempTimelineLbl: UILabel!
+    
+    
     @IBOutlet weak var tableView: UITableView!
 
     
     @IBOutlet weak var stopwatchLabel: UILabel!
+    @IBOutlet weak var coundDownLabel: UILabel!
 
 
     var firstHalfButtonCenter: CGPoint!
@@ -55,6 +58,8 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(clubName)
         
         self.firstHalf.alpha = 0
         self.secondHalf.alpha = 0
@@ -89,7 +94,8 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         endSecondHalf.center = more.center
         endFirstHalf.center = more.center
         
-        stopwatchLabel.text = "0:00"
+        stopwatchLabel.text = "00:00"
+        coundDownLabel.text = "45:00"
 
     }
     
@@ -151,12 +157,15 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
-        
-        cell.backgroundColor = self.view.backgroundColor
-        
-        cell.textLabel?.text = "How to get event"
-        cell.detailTextLabel?.text = events[indexPath.row]
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StopwatchCell
+//        cell.homePlayerLabel?.text = time[indexPath.row]
+        cell.homeEventImage.image = event[indexPath.row] as? UIImage
+        cell.eventTimeLabel.text = time[indexPath.row]
+        cell.backgroundColor = UIColor.clear
+
+//        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
+//        cell.textLabel?.text = event[indexPath.row]
+//        cell.detailTextLabel?.text = time[indexPath.row]
         
         return cell
     }
@@ -164,10 +173,8 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return events.count
+        return time.count
     }
-    
-    
     
     
     @IBAction func firstHalfClicked(_ sender: UIButton) {
@@ -215,7 +222,6 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             firstHalf.isEnabled = false
             endFirstHalf.isEnabled = false
             startStopWatch = false
-            tempTimelineLbl.text = "2nd Half Underway"
             
             let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             vc?.setInitialText("2nd Half Underway")
@@ -232,7 +238,7 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             timer.invalidate()
             startStopWatch = true
             stopwatchLabel.text = "90:00"
-            tempTimelineLbl.text = "Full Time"
+
             
             let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             vc?.setInitialText("Full Time")
@@ -246,11 +252,11 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let stopWatchString = stopWatch.elapsedTimeSinceStart()
         stopwatchLabel.text = stopWatchString
         
-        events.insert(stopWatchString, at: 0)
-
+    
+        event.insert(#imageLiteral(resourceName: "goal"), at: 0)
+        time.insert(stopWatchString, at: 0)
+        print(time)
         self.tableView.reloadData()
-        
-        print(stopWatchString)
         
         let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         vc?.setInitialText("\(stopWatchString)'  \("Goal for") ")
@@ -264,6 +270,10 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let stopWatchString = stopWatch.elapsedTimeSinceStart()
         stopwatchLabel.text = stopWatchString
         
+        time.insert(stopWatchString, at: 0)
+        event.insert(#imageLiteral(resourceName: "yellow"), at: 0)
+        self.tableView.reloadData()
+        
         let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         vc?.setInitialText("\(stopWatchString)'  \("Yellow Card for") ")
 //        vc?.add(#imageLiteral(resourceName: "refYellow"))
@@ -273,7 +283,9 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBAction func secondBookableClicked(_ sender: UIButton) {
         
         let stopWatchString = stopWatch.elapsedTimeSinceStart()
-        stopwatchLabel.text = stopWatchString
+        time.insert(stopWatchString, at: 0)
+        event.insert(#imageLiteral(resourceName: "2nd-yellow"), at: 0)
+        self.tableView.reloadData()
         
         let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         vc?.setInitialText("\(stopWatchString)'  \("Second Bookable for") ")
@@ -284,7 +296,9 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBAction func redCardClicked(_ sender: UIButton) {
         
         let stopWatchString = stopWatch.elapsedTimeSinceStart()
-        stopwatchLabel.text = stopWatchString
+        time.insert(stopWatchString, at: 0)
+        event.insert(#imageLiteral(resourceName: "red"), at: 0)
+        tableView.reloadData()
         
         let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         vc?.setInitialText("\(stopWatchString)'  \("Striaght Red for") ")
@@ -296,14 +310,15 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBAction func subClicked(_ sender: UIButton) {
         
         let stopWatchString = stopWatch.elapsedTimeSinceStart()
-        stopwatchLabel.text = stopWatchString
+        time.insert(stopWatchString, at: 0)
+        event.insert(#imageLiteral(resourceName: "sub"), at: 0)
+        tableView.reloadData()
         
         let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         vc?.setInitialText("\(stopWatchString)'  \("Substitution for") ")
-//        vc?.add(#imageLiteral(resourceName: "refSubstitution"))
+//        vc?.add(#imageLiteral(resourceName: "refSubstitution")) 
         present(vc!, animated: true, completion: nil)
         
-        tempTimelineLbl.text = "\(stopWatchString)'  \("Substitution for")"
     }
     
     func timerStart() {
@@ -311,6 +326,7 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         stopWatch.startTimer();
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateStopwatch), userInfo: nil, repeats: true)
+        
     }
     
     func updateStopwatch() {
@@ -322,6 +338,12 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func updateCountDown() {
         
+//        if (countDown > 0) {
+//            let minutes = String(countDown / 60)
+//            let seconds = String(countDown % 60)
+//            coundDownLabel.text = minutes + ":" + seconds
+//            countDown -= 1
+//        }
     }
     
     func toggleButton(button: UIButton, onImage: UIImage, offImage: UIImage) {

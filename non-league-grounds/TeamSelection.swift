@@ -30,18 +30,10 @@ class TeamSelection: UIViewController {
         
         self.navigationItem.title = club.clubName
         
-        DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerKey").queryEqual(toValue: club.clubKey).observe(.value, with: { (snapshot) in
+        DataService.ds.REF_PLAYERS.queryOrdered(byChild: "clubKey").queryEqual(toValue: club.clubKey).observe(.value, with: { (snapshot) in
         
-    
-//       DataService.ds.REF_PLAYERS.queryOrdered(byChild: "playerLastName").observe(.value, with: { (snapshot) in
-            
-        print("PLAYERS_CHILDREN: \(snapshot.children)")
-        print("PLAYERS_KEY: \(snapshot.key)")
-        print("PLAYERS_REF \(snapshot.ref)")
-        print("PLAYERS_LASTNAME: \(self.playerLastName)")
-        print("PLAYERS_COUNT: \(snapshot.childrenCount)")
-        print("PLAYERS_SNAPSHOT: \(snapshot)")
-
+            print("PLAYERS_COUNT: \(snapshot.childrenCount)")
+            print("PLAYERS_SNAPSHOT: \(snapshot)")
             
             self.player = []
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
