@@ -16,7 +16,6 @@ class ClubCell: UITableViewCell {
     
     var club: Clubs!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

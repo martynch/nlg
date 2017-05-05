@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if currentReachabilityStatus == .notReachable {
             let titleColour: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
             self.navigationController?.navigationBar.titleTextAttributes = titleColour as? [String : Any]

@@ -35,12 +35,8 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var extraTime: UIButton!
     @IBOutlet weak var endSecondHalf: UIButton!
     @IBOutlet weak var endFirstHalf: UIButton!
-    @IBOutlet weak var tempTimelineLbl: UILabel!
-    
-    
+    @IBOutlet weak var homeScoreLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
-
-    
     @IBOutlet weak var stopwatchLabel: UILabel!
     @IBOutlet weak var coundDownLabel: UILabel!
 
@@ -58,6 +54,17 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Marcos Navigation Bar Translucent
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        // Marcos Font in Nav Bar
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Arial", size: 21)!]
+        //self.navigationItem.title = "(teamOne)vs(teamTwo)"
         
         print(clubName)
         

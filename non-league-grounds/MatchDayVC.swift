@@ -13,11 +13,19 @@ class MatchDayVC: UIViewController {
     var clubName = String ()
     var club: Clubs!
     
-    
-    @IBOutlet var teamSelectionBtn: UIButton!
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Marcos Navigation Bar Translucent
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        // Marcos Font in Nav Bar
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Arial", size: 21)!]
+        self.navigationItem.title = "Team Selection"
 
     }
     
@@ -31,4 +39,5 @@ class MatchDayVC: UIViewController {
             destVC.club = club
         }
     }
+    
 }

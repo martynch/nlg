@@ -28,6 +28,7 @@
 		5A071C861DF5CED700A3D7C1 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */; };
 		5A09F8551E4B74F800F28CF1 /* StopWatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09F8541E4B74F800F28CF1 /* StopWatchVC.swift */; };
 		5A0C5B4D1E6499B900770534 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C5B4C1E6499B900770534 /* Players.swift */; };
+		5A0CD1581EAF3A4A0054962A /* RounderCornerGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD1571EAF3A4A0054962A /* RounderCornerGreen.swift */; };
 		5A0D55A41E08354A00555C14 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559B1E08354A00555C14 /* GeoFire.m */; };
 		5A0D55A51E08354A00555C14 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559D1E08354A00555C14 /* GFBase32Utils.m */; };
 		5A0D55A61E08354A00555C14 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559F1E08354A00555C14 /* GFGeoHash.m */; };
@@ -37,12 +38,16 @@
 		5A12F4E81E43961D0013885D /* TeamSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12F4E71E43961D0013885D /* TeamSelection.swift */; };
 		5A148C891E48E398006840CC /* MatchDayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A148C881E48E398006840CC /* MatchDayVC.swift */; };
 		5A1546A01E9D4EB500F62D79 /* StopwatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15469F1E9D4EB500F62D79 /* StopwatchCell.swift */; };
+		5A1639361EBA27720076821B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1639351EBA27720076821B /* LoginVC.swift */; };
+		5A4D59FE1EB8ECE600450970 /* TeamPickerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D59FD1EB8ECE600450970 /* TeamPickerViewVC.swift */; };
 		5A4EF77C1E97ED6A00B768FA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4EF77B1E97ED6A00B768FA /* GradientView.swift */; };
+		5A6364EA1EB22BD5009A018C /* EventPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6364E91EB22BD5009A018C /* EventPlayerCollectionViewCell.swift */; };
 		5A6DC1721E16A91E00CD87EC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6DC1701E16A91E00CD87EC /* SWRevealViewController.m */; };
 		5A6DC1741E16BF2200CD87EC /* burgerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6DC1731E16BF2200CD87EC /* burgerVC.swift */; };
 		5A6DC1761E16BF2F00CD87EC /* BurgerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6DC1751E16BF2F00CD87EC /* BurgerCell.swift */; };
 		5A7B8E761EA904E30013F0CC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B8E751EA904E30013F0CC /* Reachability.swift */; };
 		5AE5F9601E02E6BE00554191 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5F95F1E02E6BE00554191 /* RoundedCorners.swift */; };
+		5AE813201EAE6E0500708BD2 /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8131F1EAE6E0500708BD2 /* EventVC.swift */; };
 		5AFD5BAF1E68B80300BEE834 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD5BAE1E68B80300BEE834 /* Stopwatch.swift */; };
 		CEC1223A3CB76BD653E26A56 /* Pods_non_league_grounds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3243D09194B9252C9CA4DAC8 /* Pods_non_league_grounds.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +77,7 @@
 		5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		5A09F8541E4B74F800F28CF1 /* StopWatchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchVC.swift; sourceTree = "<group>"; };
 		5A0C5B4C1E6499B900770534 /* Players.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
+		5A0CD1571EAF3A4A0054962A /* RounderCornerGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RounderCornerGreen.swift; sourceTree = "<group>"; };
 		5A0D55941E08354A00555C14 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
 		5A0D55951E08354A00555C14 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
 		5A0D55961E08354A00555C14 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
@@ -92,14 +98,18 @@
 		5A12F4E71E43961D0013885D /* TeamSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSelection.swift; sourceTree = "<group>"; };
 		5A148C881E48E398006840CC /* MatchDayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDayVC.swift; sourceTree = "<group>"; };
 		5A15469F1E9D4EB500F62D79 /* StopwatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopwatchCell.swift; sourceTree = "<group>"; };
+		5A1639351EBA27720076821B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		5A3F04C21DF5E4D100325ACF /* non-league-grounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "non-league-grounds.entitlements"; sourceTree = "<group>"; };
+		5A4D59FD1EB8ECE600450970 /* TeamPickerViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPickerViewVC.swift; sourceTree = "<group>"; };
 		5A4EF77B1E97ED6A00B768FA /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		5A6364E91EB22BD5009A018C /* EventPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A6DC1701E16A91E00CD87EC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		5A6DC1711E16A91E00CD87EC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		5A6DC1731E16BF2200CD87EC /* burgerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = burgerVC.swift; sourceTree = "<group>"; };
 		5A6DC1751E16BF2F00CD87EC /* BurgerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BurgerCell.swift; sourceTree = "<group>"; };
 		5A7B8E751EA904E30013F0CC /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5AE5F95F1E02E6BE00554191 /* RoundedCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		5AE8131F1EAE6E0500708BD2 /* EventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		5AFD5BAE1E68B80300BEE834 /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		A1513EC6DE318E36BD8B98DD /* Pods-non-league-grounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-non-league-grounds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-non-league-grounds/Pods-non-league-grounds.debug.xcconfig"; sourceTree = "<group>"; };
 		DC9254C41C06E6DDDDCEB9A9 /* Pods-non-league-grounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-non-league-grounds.release.xcconfig"; path = "Pods/Target Support Files/Pods-non-league-grounds/Pods-non-league-grounds.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,8 +222,10 @@
 				5A071C6B1DF5CC4800A3D7C1 /* ClubDetailsVC.swift */,
 				5A0571C81E07162E00B1881F /* ClubLocationVC.swift */,
 				5A12F4E71E43961D0013885D /* TeamSelection.swift */,
+				5A4D59FD1EB8ECE600450970 /* TeamPickerViewVC.swift */,
 				5A148C881E48E398006840CC /* MatchDayVC.swift */,
 				5A09F8541E4B74F800F28CF1 /* StopWatchVC.swift */,
+				5AE8131F1EAE6E0500708BD2 /* EventVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -227,6 +239,9 @@
 				5AE5F95F1E02E6BE00554191 /* RoundedCorners.swift */,
 				5A4EF77B1E97ED6A00B768FA /* GradientView.swift */,
 				5A15469F1E9D4EB500F62D79 /* StopwatchCell.swift */,
+				5A0CD1571EAF3A4A0054962A /* RounderCornerGreen.swift */,
+				5A6364E91EB22BD5009A018C /* EventPlayerCollectionViewCell.swift */,
+				5A1639351EBA27720076821B /* LoginVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -416,8 +431,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4D59FE1EB8ECE600450970 /* TeamPickerViewVC.swift in Sources */,
 				5A071C4E1DF5C76800A3D7C1 /* ViewController.swift in Sources */,
 				5A0D55A61E08354A00555C14 /* GFGeoHash.m in Sources */,
+				5A0CD1581EAF3A4A0054962A /* RounderCornerGreen.swift in Sources */,
+				5A1639361EBA27720076821B /* LoginVC.swift in Sources */,
 				5A071C7C1DF5CE3400A3D7C1 /* DataServices.swift in Sources */,
 				5A071C661DF5CB6B00A3D7C1 /* LeaguesVC.swift in Sources */,
 				5A0D55A81E08354A00555C14 /* GFQuery.m in Sources */,
@@ -435,6 +453,7 @@
 				5AE5F9601E02E6BE00554191 /* RoundedCorners.swift in Sources */,
 				5A6DC1721E16A91E00CD87EC /* SWRevealViewController.m in Sources */,
 				5A0C5B4D1E6499B900770534 /* Players.swift in Sources */,
+				5A6364EA1EB22BD5009A018C /* EventPlayerCollectionViewCell.swift in Sources */,
 				5AFD5BAF1E68B80300BEE834 /* Stopwatch.swift in Sources */,
 				5A071C761DF5CD7900A3D7C1 /* ClubCell.swift in Sources */,
 				5A148C891E48E398006840CC /* MatchDayVC.swift in Sources */,
@@ -443,6 +462,7 @@
 				5A1546A01E9D4EB500F62D79 /* StopwatchCell.swift in Sources */,
 				5A0571C91E07162E00B1881F /* ClubLocationVC.swift in Sources */,
 				5A4EF77C1E97ED6A00B768FA /* GradientView.swift in Sources */,
+				5AE813201EAE6E0500708BD2 /* EventVC.swift in Sources */,
 				5A09F8551E4B74F800F28CF1 /* StopWatchVC.swift in Sources */,
 				5A0D55A41E08354A00555C14 /* GeoFire.m in Sources */,
 			);

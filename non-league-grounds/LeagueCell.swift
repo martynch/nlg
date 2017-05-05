@@ -10,8 +10,7 @@ import UIKit
 
 class LeagueCell: UITableViewCell {
     
-    @IBOutlet weak var leagueLbl: UILabel!
-    
+    @IBOutlet weak var leagueLbl: UILabel!    
     @IBOutlet weak var leagueImg: UIImageView!
     
     var league: Leagues!

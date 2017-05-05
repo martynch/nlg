@@ -1,0 +1,6 @@
+framework module Pods_non_league_grounds {
+  umbrella header "Pods-non-league-grounds-umbrella.h"
+
+  export *
+  module * { export * }
+}

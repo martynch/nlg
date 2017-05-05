@@ -12,6 +12,10 @@ import Firebase
 
 class TeamSelection: UIViewController {
     
+    //IBOutlets Collection for Player Names
+    @IBOutlet var playerButtons: [UIButton]!
+    
+    
     var player = [Players]()
     var club: Clubs!
     var clubName = String()
@@ -26,7 +30,6 @@ class TeamSelection: UIViewController {
         
         CLUB_KEY = ""
         CLUB_KEY = club.clubKey
-        
         
         self.navigationItem.title = club.clubName
         
@@ -54,40 +57,12 @@ class TeamSelection: UIViewController {
             print("CHET: local error")
         }
     }
-}
-
-class DraggableView: UIView {
     
-    private var originalCenter: CGPoint?
-    private var dragStart: CGPoint?
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        originalCenter = center
-        dragStart = touches.first?.location(in: superview)
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return }
-        var location = touch.location(in: superview)
-        if let predicted = event?.predictedTouches(for: touch)?.last {
-            location = predicted.location(in: superview)
-        }
-        center = dragStart! + location - originalCenter!
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return }
-        let location = touch.location(in: superview)
-        center = dragStart! + location - originalCenter!
-    }
-}
-
-extension CGPoint {
-    static func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
-        return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
-    }
-    
-    static func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
-        return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
-    }
+    //IBActions Collection for Player Names
+    @IBAction func playerSelectionAction(_ sender: UIButton) {
+        
+        let sender = sender.tag
+        print(sender)
+        
+    }    
 }
