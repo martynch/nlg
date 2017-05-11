@@ -2,6 +2,61 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Fabric</key>
+    <dict>
+        <key>APIKey</key>
+        <string>jy5tvZUrj4oj1g9vxM76xXPr4</string>
+        <key>Kits</key>
+        <array>
+            <dict>
+                <key>KitInfo</key>
+                <dict/>
+                <key>KitName</key>
+                <string>Crashlytics</string>
+            </dict>
+            <dict>
+                <key>KitInfo</key>
+                <dict>
+                    <key>consumerKey</key>
+                    <string>jy5tvZUrj4oj1g9vxM76xXPr4</string>
+                    <key>consumerSecret</key>
+                    <string>byexEgkQNryy05Z7aAjA9i4iHEhAPajqBuphvFQJLg1xMFYraZ</string>
+                </dict>
+                <key>KitName</key>
+                <string>Twitter</string>
+            </dict>
+            <dict>
+                <key>KitInfo</key>
+                <dict/>
+                <key>KitName</key>
+                <string>MoPub</string>
+            </dict>
+        </array>
+    </dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1066303110839-iis5am9f5rlnqtd0ggit11r426629gvu</string>
+				<string>fb834082013408060</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>uk.ltd.chetnet.non-league-grounds</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>834082013408060</string>
+	<key>FacebookDisplayName</key>
+	<string>Non-League Grounds</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -22,7 +77,10 @@
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>fb</string>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
 		<string>twitter</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>

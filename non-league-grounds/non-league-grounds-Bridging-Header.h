@@ -9,3 +9,5 @@
 #import "GeoFire.h"
 #import "SWRevealViewController.h"
 #import "SDWebImage/UIImageView+WebCache.h"
+#import "FBSDKCoreKit/FBSDKCoreKit.h"
+#import "FBSDKLoginKit/FBSDKLoginKit.h"

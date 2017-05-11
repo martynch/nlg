@@ -27,6 +27,7 @@
 		5A071C851DF5CED700A3D7C1 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C811DF5CED700A3D7C1 /* NotoSans-Italic.ttf */; };
 		5A071C861DF5CED700A3D7C1 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */; };
 		5A09F8551E4B74F800F28CF1 /* StopWatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09F8541E4B74F800F28CF1 /* StopWatchVC.swift */; };
+		5A0C1B041EBCFB6600D6BF69 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C1B031EBCFB6600D6BF69 /* Helper.swift */; };
 		5A0C5B4D1E6499B900770534 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C5B4C1E6499B900770534 /* Players.swift */; };
 		5A0CD1581EAF3A4A0054962A /* RounderCornerGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD1571EAF3A4A0054962A /* RounderCornerGreen.swift */; };
 		5A0D55A41E08354A00555C14 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D559B1E08354A00555C14 /* GeoFire.m */; };
@@ -39,6 +40,8 @@
 		5A148C891E48E398006840CC /* MatchDayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A148C881E48E398006840CC /* MatchDayVC.swift */; };
 		5A1546A01E9D4EB500F62D79 /* StopwatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15469F1E9D4EB500F62D79 /* StopwatchCell.swift */; };
 		5A1639361EBA27720076821B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1639351EBA27720076821B /* LoginVC.swift */; };
+		5A1A963D1EC0BE580094524E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1A963B1EC0BE580094524E /* FBSDKCoreKit.framework */; };
+		5A1A963E1EC0BE580094524E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1A963C1EC0BE580094524E /* FBSDKLoginKit.framework */; };
 		5A4D59FE1EB8ECE600450970 /* TeamPickerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D59FD1EB8ECE600450970 /* TeamPickerViewVC.swift */; };
 		5A4EF77C1E97ED6A00B768FA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4EF77B1E97ED6A00B768FA /* GradientView.swift */; };
 		5A6364EA1EB22BD5009A018C /* EventPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6364E91EB22BD5009A018C /* EventPlayerCollectionViewCell.swift */; };
@@ -76,6 +79,7 @@
 		5A071C811DF5CED700A3D7C1 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		5A071C821DF5CED700A3D7C1 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		5A09F8541E4B74F800F28CF1 /* StopWatchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchVC.swift; sourceTree = "<group>"; };
+		5A0C1B031EBCFB6600D6BF69 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		5A0C5B4C1E6499B900770534 /* Players.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		5A0CD1571EAF3A4A0054962A /* RounderCornerGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RounderCornerGreen.swift; sourceTree = "<group>"; };
 		5A0D55941E08354A00555C14 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		5A148C881E48E398006840CC /* MatchDayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDayVC.swift; sourceTree = "<group>"; };
 		5A15469F1E9D4EB500F62D79 /* StopwatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopwatchCell.swift; sourceTree = "<group>"; };
 		5A1639351EBA27720076821B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		5A1A963B1EC0BE580094524E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "non-league-grounds/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		5A1A963C1EC0BE580094524E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "non-league-grounds/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		5A3F04C21DF5E4D100325ACF /* non-league-grounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "non-league-grounds.entitlements"; sourceTree = "<group>"; };
 		5A4D59FD1EB8ECE600450970 /* TeamPickerViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPickerViewVC.swift; sourceTree = "<group>"; };
 		5A4EF77B1E97ED6A00B768FA /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC1223A3CB76BD653E26A56 /* Pods_non_league_grounds.framework in Frameworks */,
+				5A1A963D1EC0BE580094524E /* FBSDKCoreKit.framework in Frameworks */,
+				5A1A963E1EC0BE580094524E /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +138,8 @@
 		0A8A45DFF4ACCB8E37A19DC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A1A963C1EC0BE580094524E /* FBSDKLoginKit.framework */,
+				5A1A963B1EC0BE580094524E /* FBSDKCoreKit.framework */,
 				3243D09194B9252C9CA4DAC8 /* Pods_non_league_grounds.framework */,
 			);
 			name = Frameworks;
@@ -195,6 +205,7 @@
 		5A071C601DF5CACA00A3D7C1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5A0C1B031EBCFB6600D6BF69 /* Helper.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -215,6 +226,7 @@
 			children = (
 				5A6DC1701E16A91E00CD87EC /* SWRevealViewController.m */,
 				5A6DC1711E16A91E00CD87EC /* SWRevealViewController.h */,
+				5A1639351EBA27720076821B /* LoginVC.swift */,
 				5A071C4D1DF5C76800A3D7C1 /* ViewController.swift */,
 				5A6DC1731E16BF2200CD87EC /* burgerVC.swift */,
 				5A071C651DF5CB6B00A3D7C1 /* LeaguesVC.swift */,
@@ -241,7 +253,6 @@
 				5A15469F1E9D4EB500F62D79 /* StopwatchCell.swift */,
 				5A0CD1571EAF3A4A0054962A /* RounderCornerGreen.swift */,
 				5A6364E91EB22BD5009A018C /* EventPlayerCollectionViewCell.swift */,
-				5A1639351EBA27720076821B /* LoginVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -453,6 +464,7 @@
 				5AE5F9601E02E6BE00554191 /* RoundedCorners.swift in Sources */,
 				5A6DC1721E16A91E00CD87EC /* SWRevealViewController.m in Sources */,
 				5A0C5B4D1E6499B900770534 /* Players.swift in Sources */,
+				5A0C1B041EBCFB6600D6BF69 /* Helper.swift in Sources */,
 				5A6364EA1EB22BD5009A018C /* EventPlayerCollectionViewCell.swift in Sources */,
 				5AFD5BAF1E68B80300BEE834 /* Stopwatch.swift in Sources */,
 				5A071C761DF5CD7900A3D7C1 /* ClubCell.swift in Sources */,
@@ -592,6 +604,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "non-league-grounds/non-league-grounds.entitlements";
 				DEVELOPMENT_TEAM = LPABA4W369;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/non-league-grounds",
+				);
 				INFOPLIST_FILE = "non-league-grounds/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.ltd.chetnet.non-league-grounds";
@@ -607,6 +623,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "non-league-grounds/non-league-grounds.entitlements";
 				DEVELOPMENT_TEAM = LPABA4W369;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/non-league-grounds",
+				);
 				INFOPLIST_FILE = "non-league-grounds/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.ltd.chetnet.non-league-grounds";

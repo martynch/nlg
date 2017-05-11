@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
+import FBSDKCoreKit
 import GoogleSignIn
 import Fabric
 import TwitterCore
@@ -23,20 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        Twitter.sharedInstance().start(withConsumerKey: "jy5tvZUrj4oj1g9vxM76xXPr4", consumerSecret: 	"byexEgkQNryy05Z7aAjA9i4iHEhAPajqBuphvFQJLg1xMFYraZ")
         
         Fabric.with([Twitter.self])
         
-        FIRApp.configure()
-        
-        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
-        
-        Twitter.sharedInstance().start(withConsumerKey: "uFIHSaxMsW65ejPSfUeiyKMQk", consumerSecret: "4bqZwXEXpgi7A7ZdZWVrTidkyMuL4oIy8wKg0v2C8zzZQ1dTUR")
-        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        application.statusBarStyle = .lightContent
+
+        FIRApp.configure()
         
         return true
     }
@@ -48,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         
-        print("Sucessfully logged int oGogle: ",user)
+        print("Sucessfully logged int Google: ",user)
         
         guard let idToken = user.authentication.idToken else { return }
         guard let accessToken = user.authentication.accessToken else { return }
@@ -65,26 +60,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             guard let uid = user?.uid else { return }
             
-            //            let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
-            //
-            //            DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
-            //
-            //            print("Data Saved to Keychain \(keychainResult)")
-            //
-            //
-            //            performSegue(withIdentifier: "goToFeed", sender: nil)
-            //
-            //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            //            let naviVC = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController
-            //            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            //            appDelegate.window?.rootViewController = naviVC
+            
+//            let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
+//            
+//            DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+//            print("Data Saved to Keychain \(keychainResult)")
+//            performSegue(withIdentifier: "goToFeed", sender: nil)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let naviVC = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = naviVC
             
             print("Sucessfully logged into firebase with google", uid)
             
         })
     }
     
-    // GOOGLE open URL
+    // Open URL
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
         let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String!, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
@@ -103,6 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // FACEBOOK open URL
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 

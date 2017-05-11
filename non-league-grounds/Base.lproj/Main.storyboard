@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fv7-en-0Oz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ocQ-Zf-dYS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1542,6 +1542,17 @@
                                     <segue destination="Hy4-CL-fjn" kind="show" id="iew-f6-STc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-rU-uiX">
+                                <rect key="frame" x="49" y="393" width="279" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Temp Logout Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButton:" destination="RdE-vl-LaL" eventType="touchUpInside" id="VDN-42-oBv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1590,12 +1601,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2EN-FO-V8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194.375" y="355.98591549295776"/>
+            <point key="canvasLocation" x="1192.8" y="355.7721139430285"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="AyE-fS-muM">
             <objects>
-                <viewController id="ocQ-Zf-dYS" userLabel="LoginVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="ocQ-Zf-dYS" userLabel="LoginVC" customClass="LoginVC" customModule="non_league_grounds" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1ES-l3-4Li"/>
                         <viewControllerLayoutGuide type="bottom" id="eTt-ki-Le2"/>
@@ -1603,17 +1614,84 @@
                     <view key="view" contentMode="scaleToFill" id="VJG-4L-Vzr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pitch" translatesAutoresizingMaskIntoConstraints="NO" id="LlI-5l-bsX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-SM-yaL" userLabel="Facebook">
+                                <rect key="frame" x="58" y="552" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vpr-WS-eUR"/>
+                                    <constraint firstAttribute="width" constant="40" id="Yj0-7O-PhL"/>
+                                </constraints>
+                                <state key="normal" image="facebooklogin"/>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="ocQ-Zf-dYS" eventType="touchUpInside" id="GJL-Dh-dCR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USx-m5-Yk1" userLabel="Google">
+                                <rect key="frame" x="264" y="552" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DtH-Jf-C4j"/>
+                                    <constraint firstAttribute="width" constant="40" id="vhB-3i-NfO"/>
+                                </constraints>
+                                <state key="normal" image="googlelogin"/>
+                                <connections>
+                                    <action selector="goggleLogin:" destination="ocQ-Zf-dYS" eventType="touchUpInside" id="NHL-1N-nQW"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCs-BE-KEc" userLabel="orLine">
+                                <rect key="frame" x="71" y="483" width="233" height="14"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvg-zw-J6u">
+                                <rect key="frame" x="58" y="401" width="233" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login Annoymously"/>
+                                <connections>
+                                    <action selector="signInTapped:" destination="ocQ-Zf-dYS" eventType="touchUpInside" id="zlf-E5-Iwd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5v-js-c7g" userLabel="Twitter">
+                                <rect key="frame" x="167" y="552" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eYH-sX-Yeg"/>
+                                    <constraint firstAttribute="width" constant="40" id="z1a-Hv-qgz"/>
+                                </constraints>
+                                <state key="normal" image="twitterlogin"/>
+                                <connections>
+                                    <action selector="twitterBtnTapped:" destination="ocQ-Zf-dYS" eventType="touchUpInside" id="bXK-Yq-IfN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LlI-5l-bsX" firstAttribute="top" secondItem="VJG-4L-Vzr" secondAttribute="top" id="AAq-Cy-cV0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="USx-m5-Yk1" secondAttribute="trailing" constant="55" id="Ahu-1v-6As"/>
+                            <constraint firstItem="eTt-ki-Le2" firstAttribute="top" secondItem="e5v-js-c7g" secondAttribute="bottom" constant="75" id="BNG-q0-TB7"/>
+                            <constraint firstItem="eTt-ki-Le2" firstAttribute="top" secondItem="USx-m5-Yk1" secondAttribute="bottom" constant="75" id="ID1-HY-0nu"/>
+                            <constraint firstItem="LlI-5l-bsX" firstAttribute="leading" secondItem="VJG-4L-Vzr" secondAttribute="leading" id="Rik-9f-Tgz"/>
+                            <constraint firstItem="e5v-js-c7g" firstAttribute="top" secondItem="XCs-BE-KEc" secondAttribute="bottom" constant="55" id="TqZ-E9-5t8"/>
+                            <constraint firstItem="eTt-ki-Le2" firstAttribute="top" secondItem="zJr-SM-yaL" secondAttribute="bottom" constant="75" id="amT-Dd-GGA"/>
+                            <constraint firstItem="USx-m5-Yk1" firstAttribute="top" secondItem="XCs-BE-KEc" secondAttribute="bottom" constant="55" id="b0Q-Tm-B9R"/>
+                            <constraint firstItem="e5v-js-c7g" firstAttribute="leading" secondItem="zJr-SM-yaL" secondAttribute="trailing" constant="69" id="bY8-yN-oRU"/>
+                            <constraint firstAttribute="trailing" secondItem="LlI-5l-bsX" secondAttribute="trailing" id="ejY-zL-kkq"/>
+                            <constraint firstItem="eTt-ki-Le2" firstAttribute="top" secondItem="LlI-5l-bsX" secondAttribute="bottom" id="gRl-li-pQl"/>
+                            <constraint firstItem="zJr-SM-yaL" firstAttribute="top" secondItem="XCs-BE-KEc" secondAttribute="bottom" constant="55" id="kgn-oa-X8w"/>
+                            <constraint firstItem="USx-m5-Yk1" firstAttribute="leading" secondItem="e5v-js-c7g" secondAttribute="trailing" constant="57" id="mxy-mh-l32"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginRegisterBtn" destination="Nvg-zw-J6u" id="T8x-2b-Aqa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka3-eZ-lEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1454" y="-22"/>
+            <point key="canvasLocation" x="-1455.2" y="-22.03898050974513"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="ezV-ie-tYR">
             <objects>
-                <viewController id="fv7-en-0Oz" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReavealVC" id="fv7-en-0Oz" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O76-4k-5iS"/>
                         <viewControllerLayoutGuide type="bottom" id="YOi-Oe-hg3"/>
@@ -1630,7 +1708,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68E-eJ-H0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-572" y="-22"/>
+            <point key="canvasLocation" x="-554" y="-22"/>
         </scene>
         <!--BurgerVC-->
         <scene sceneID="4NX-ZL-njs">
@@ -1731,8 +1809,10 @@
         <image name="end-1st" width="36" height="36"/>
         <image name="end-2nd" width="36" height="36"/>
         <image name="extra" width="36" height="36"/>
+        <image name="facebooklogin" width="128" height="128"/>
         <image name="globe" width="60" height="60"/>
         <image name="goal" width="36" height="36"/>
+        <image name="googlelogin" width="120" height="120"/>
         <image name="grounds-pins" width="911" height="554"/>
         <image name="group" width="60" height="60"/>
         <image name="keeper " width="200" height="178"/>
@@ -1742,12 +1822,14 @@
         <image name="menu" width="32" height="32"/>
         <image name="more_off" width="32" height="32"/>
         <image name="more_on" width="32" height="32"/>
+        <image name="pitch" width="750" height="1000"/>
         <image name="red" width="36" height="36"/>
         <image name="shirt" width="200" height="178"/>
         <image name="start-1st" width="36" height="36"/>
         <image name="start-2nd" width="36" height="36"/>
         <image name="sub" width="36" height="36"/>
         <image name="support-facebook" width="102" height="102"/>
+        <image name="twitterlogin" width="128" height="128"/>
         <image name="yellow" width="24" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -7,9 +7,15 @@ target 'non-league-grounds' do
 
   # Pods for non-league-grounds
 
+  pod 'Firebase'
+  pod 'Firebase/Auth’
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
   pod 'SDWebImage'
+  pod 'Fabric'
+  pod 'TwitterKit'
 
 end

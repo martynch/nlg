@@ -73,6 +73,22 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func logOutButton(_ sender: Any) {
+        
+        do {
+            try FIRAuth.auth()?.signOut()
+            print("Logout tapped")
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = LoginVC
+    }
+    
     func showAlert(_ title: String, msg: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
