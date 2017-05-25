@@ -14,7 +14,6 @@ import FBSDKLoginKit
 import TwitterKit
 
 
-
 class Helper {
     static let helper = Helper()
     
@@ -41,10 +40,11 @@ class Helper {
                 
                 if let errCode = FIRAuthErrorCode(rawValue: error!._code) {
                     switch errCode {
-//                    case .errorCodeEmailAlreadyInUse:
-//                        Helper.showMessage("The email address is already in use", msg: "Did you register using another method below?")
-//                    case .errorCodeWeakPassword:
-//                        self.showAlert("Weak Password", msg: "The password must be at least 6 characters long")
+                    case .errorCodeEmailAlreadyInUse:
+                        break;
+                    case .errorCodeWeakPassword:
+                        break;
+
                     default:
                         print("DID NOT CATCH ANY FAULT")
                     }
@@ -65,6 +65,7 @@ class Helper {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user: FIRUser?, error: Error?) in
             if error != nil {
                 print(error?.localizedDescription ?? "")
+//                showAlert(title: "Email in use, did you use another method to register", msg: "please try again", controller: self)
             }else {
                 print(user?.email ?? "")
                 print(user?.displayName ?? "")
@@ -73,13 +74,12 @@ class Helper {
         })
     }
     
-    
-    func showAlert(title: String, msg: String, `on` controller: UIViewController) {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+    func showAlert(title: String, msg: String, controller: UIViewController) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
         controller.present(alert, animated: true, completion: nil)
     }
-
     
     func switchToRevealVC(){
         
@@ -87,5 +87,15 @@ class Helper {
         let naviVC = storyboard.instantiateViewController(withIdentifier: "ReavealVC") as! SWRevealViewController
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = naviVC
+    }
+}
+
+extension UIViewController {
+    
+    func showExtensionAlert(title: String, msg: String) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
 }

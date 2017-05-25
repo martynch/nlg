@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             self.navigationController?.navigationBar.barTintColor = UIColor (red: 248.0/255, green: 8.0/255, blue: 8.0/255, alpha: 1.0)
             self.navigationController?.navigationBar.tintColor = UIColor.white
             
-            showAlert("No Internet Detected", msg: "Data Connectivity is Required")
+            Helper.helper.showAlert(title: "Not Internet Detected", msg: "Data Connectivity is Required", controller: self)
             
         } else {
             self.navigationItem.title = "Non-League Grounds"
@@ -75,25 +75,51 @@ class ViewController: UIViewController {
     
     @IBAction func logOutButton(_ sender: Any) {
         
-        do {
-            try FIRAuth.auth()?.signOut()
-            print("Logout tapped")
-            
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        FirebaseManager.signOut()
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = LoginVC
+//        do {
+//            try FIRAuth.auth()?.signOut()
+//
+//        } catch let error {
+//            print(error.localizedDescription)
+//        }
+
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = LoginVC
     }
     
-    func showAlert(_ title: String, msg: String) {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if FirebaseManager.didLinkToProvider, let info = FirebaseManager.loginInfo {
+            
+            FirebaseManager.login(email: info.email, password: info.password, completion: { (status: Bool, error:Error?) in
+                
+                if status {
+                    
+                    DispatchQueue.main.async {
+                        self.handleEmailStatus()
+                    }
+                }
+                
+            })
+        } else {
+            
+            if FirebaseManager.isLoggedIn == false {
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC2") as! LoginViewController
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = LoginVC
+            }
+        }
     }
-
+    
+    func handleEmailStatus() {
+        
+    }
 }
+
+

@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
         FIRApp.configure()
+        FirebaseManager.setup()
         
         return true
     }
@@ -59,13 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             guard let uid = user?.uid else { return }
-            
-            
-//            let keychainResult = KeychainWrapper.defaultKeychainWrapper().setString(id, forKey: KEY_UID)
-//            
-//            DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
-//            print("Data Saved to Keychain \(keychainResult)")
-//            performSegue(withIdentifier: "goToFeed", sender: nil)
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let naviVC = storyboard.instantiateViewController(withIdentifier: "NavigationVC") as! UINavigationController

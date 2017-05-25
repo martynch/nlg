@@ -42,6 +42,8 @@
 		5A1639361EBA27720076821B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1639351EBA27720076821B /* LoginVC.swift */; };
 		5A1A963D1EC0BE580094524E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1A963B1EC0BE580094524E /* FBSDKCoreKit.framework */; };
 		5A1A963E1EC0BE580094524E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1A963C1EC0BE580094524E /* FBSDKLoginKit.framework */; };
+		5A34D04A1ECB4587003978E0 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A34D0491ECB4587003978E0 /* FirebaseManager.swift */; };
+		5A359C201ECB7759005F7E93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A359C1F1ECB7759005F7E93 /* LoginViewController.swift */; };
 		5A4D59FE1EB8ECE600450970 /* TeamPickerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D59FD1EB8ECE600450970 /* TeamPickerViewVC.swift */; };
 		5A4EF77C1E97ED6A00B768FA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4EF77B1E97ED6A00B768FA /* GradientView.swift */; };
 		5A6364EA1EB22BD5009A018C /* EventPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6364E91EB22BD5009A018C /* EventPlayerCollectionViewCell.swift */; };
@@ -105,6 +107,8 @@
 		5A1639351EBA27720076821B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		5A1A963B1EC0BE580094524E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "non-league-grounds/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		5A1A963C1EC0BE580094524E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "non-league-grounds/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		5A34D0491ECB4587003978E0 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		5A359C1F1ECB7759005F7E93 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A3F04C21DF5E4D100325ACF /* non-league-grounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "non-league-grounds.entitlements"; sourceTree = "<group>"; };
 		5A4D59FD1EB8ECE600450970 /* TeamPickerViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamPickerViewVC.swift; sourceTree = "<group>"; };
 		5A4EF77B1E97ED6A00B768FA /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				5A0C1B031EBCFB6600D6BF69 /* Helper.swift */,
+				5A34D0491ECB4587003978E0 /* FirebaseManager.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				5A6DC1701E16A91E00CD87EC /* SWRevealViewController.m */,
 				5A6DC1711E16A91E00CD87EC /* SWRevealViewController.h */,
 				5A1639351EBA27720076821B /* LoginVC.swift */,
+				5A359C1F1ECB7759005F7E93 /* LoginViewController.swift */,
 				5A071C4D1DF5C76800A3D7C1 /* ViewController.swift */,
 				5A6DC1731E16BF2200CD87EC /* burgerVC.swift */,
 				5A071C651DF5CB6B00A3D7C1 /* LeaguesVC.swift */,
@@ -454,6 +460,7 @@
 				5A0D55A71E08354A00555C14 /* GFGeoHashQuery.m in Sources */,
 				5A7B8E761EA904E30013F0CC /* Reachability.swift in Sources */,
 				5A071C741DF5CD3000A3D7C1 /* LeagueCell.swift in Sources */,
+				5A34D04A1ECB4587003978E0 /* FirebaseManager.swift in Sources */,
 				5A071C4C1DF5C76800A3D7C1 /* AppDelegate.swift in Sources */,
 				5A071C6A1DF5CC1800A3D7C1 /* ClubsVC.swift in Sources */,
 				5A12F4E81E43961D0013885D /* TeamSelection.swift in Sources */,
@@ -465,6 +472,7 @@
 				5A6DC1721E16A91E00CD87EC /* SWRevealViewController.m in Sources */,
 				5A0C5B4D1E6499B900770534 /* Players.swift in Sources */,
 				5A0C1B041EBCFB6600D6BF69 /* Helper.swift in Sources */,
+				5A359C201ECB7759005F7E93 /* LoginViewController.swift in Sources */,
 				5A6364EA1EB22BD5009A018C /* EventPlayerCollectionViewCell.swift in Sources */,
 				5AFD5BAF1E68B80300BEE834 /* Stopwatch.swift in Sources */,
 				5A071C761DF5CD7900A3D7C1 /* ClubCell.swift in Sources */,

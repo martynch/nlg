@@ -70,33 +70,18 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         self.firstHalf.alpha = 0
         self.secondHalf.alpha = 0
-        self.goal.alpha = 0
-        self.yellow.alpha = 0
-        self.secondYellow.alpha = 0
-        self.red.alpha = 0
-        self.sub.alpha = 0
         self.extraTime.alpha = 0
         self.endSecondHalf.alpha = 0
         self.endFirstHalf.alpha = 0
 
         firstHalfButtonCenter = firstHalf.center
         secondHalfButtonCenter = secondHalf.center
-        goalButtonCenter = goal.center
-        yellowCardButtonCenter = yellow.center
-        secondYellowCardButtonCenter = secondYellow.center
-        redCardButtonCenter = red.center
-        subButtonCenter = sub.center
         extraTimeButtonButtonCenter = extraTime.center
         secondHalfEndedButtonCenter = endSecondHalf.center
         firstHalfEndedButtonCenter = endFirstHalf.center
         
         firstHalf.center = more.center
         secondHalf.center = more.center
-        goal.center = more.center
-        yellow.center = more.center
-        secondYellow.center = more.center
-        red.center = more.center
-        sub.center = more.center
         extraTime.center = more.center
         endSecondHalf.center = more.center
         endFirstHalf.center = more.center
@@ -110,23 +95,13 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         if more.currentImage == #imageLiteral(resourceName: "more_off") {
             UIView.animate(withDuration: 0.3, animations: {
                 self.firstHalf.alpha = 1
-                self.secondHalf.alpha = 1
-                self.goal.alpha = 1
-                self.yellow.alpha = 1
-                self.secondYellow.alpha = 1
-                self.red.alpha = 1
-                self.sub.alpha = 1
-                self.extraTime.alpha = 1
-                self.endSecondHalf.alpha = 1
                 self.endFirstHalf.alpha = 1
+                self.secondHalf.alpha = 1
+                self.endSecondHalf.alpha = 1
+                self.extraTime.alpha = 1
                 
                 self.firstHalf.center = self.firstHalfButtonCenter
                 self.secondHalf.center = self.secondHalfButtonCenter
-                self.goal.center = self.goalButtonCenter
-                self.yellow.center = self.yellowCardButtonCenter
-                self.secondYellow.center = self.secondYellowCardButtonCenter
-                self.red.center = self.redCardButtonCenter
-                self.sub.center = self.subButtonCenter
                 self.extraTime.center = self.extraTimeButtonButtonCenter
                 self.endSecondHalf.center = self.secondHalfEndedButtonCenter
                 self.endFirstHalf.center = self.firstHalfEndedButtonCenter
@@ -135,23 +110,15 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         } else {
             UIView.animate(withDuration: 0.3, animations: {
                 self.firstHalf.alpha = 0
-                self.secondHalf.alpha = 0
-                self.goal.alpha = 0
-                self.yellow.alpha = 0
-                self.secondYellow.alpha = 0
-                self.red.alpha = 0
-                self.sub.alpha = 0
-                self.extraTime.alpha = 0
-                self.endSecondHalf.alpha = 0
                 self.endFirstHalf.alpha = 0
+                self.secondHalf.alpha = 0
+                self.endSecondHalf.alpha = 0
+                self.extraTime.alpha = 0
+                
+                
     
                 self.firstHalf.center = self.more.center
                 self.secondHalf.center = self.more.center
-                self.goal.center = self.more.center
-                self.yellow.center = self.more.center
-                self.secondYellow.center = self.more.center
-                self.red.center = self.more.center
-                self.sub.center = self.more.center
                 self.extraTime.center = self.more.center
                 self.endSecondHalf.center = self.more.center
                 self.endFirstHalf.center = self.more.center
@@ -191,6 +158,7 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             firstHalfTime = true
             startStopWatch = false
             firstHalf.isEnabled = false
+            endFirstHalf.isEnabled = true
             secondHalf.isEnabled = false
             endSecondHalf.isEnabled = false
             
@@ -207,10 +175,10 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         if startStopWatch == false {
             timer.invalidate()
             startStopWatch = true
-            secondHalf.isEnabled = true
+            firstHalf.isEnabled = false
             endFirstHalf.isEnabled = false
-            stopwatchLabel.text = "45:00"
-            
+            secondHalf.isEnabled = true
+            secondHalf.alpha = 1
             let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             vc?.setInitialText("Half Time")
 //            vc?.add(#imageLiteral(resourceName: "end-1st"))
@@ -241,10 +209,9 @@ class StopWatchVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         if startStopWatch == false {
             firstHalf.isEnabled = true
-            endSecondHalf.isEnabled = true
+            endSecondHalf.isEnabled = false
             timer.invalidate()
             startStopWatch = true
-            stopwatchLabel.text = "90:00"
 
             
             let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
