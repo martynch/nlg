@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
         FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true
         FirebaseManager.setup()
         
         return true
@@ -55,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if error != nil {
                 self.showAlert("Email in use", message: "Have you logged before using another method?", buttonTitle: "OK", window: self.window!)
                 print(error.debugDescription)
+                print("HERE YOUR LOOKING AT IT")
                 
                 return
             }

@@ -18,7 +18,7 @@ class Players {
         if _playerFirstName == nil {
             _playerFirstName = ""
         }
-        return _playerLastName
+        return _playerFirstName
     }
     
     var playerLastName: String {
@@ -46,7 +46,7 @@ class Players {
     init(playerKey: String, dictionary: Dictionary<String, Any>) {
         self._playerKey = playerKey
         
-        if let playerFirstName = dictionary["PlayerFirstName"] as? String {
+        if let playerFirstName = dictionary["playerFirstName"] as? String {
             self._playerFirstName = playerFirstName
         }
         

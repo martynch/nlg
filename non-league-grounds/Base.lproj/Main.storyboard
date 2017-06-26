@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mk2-Ap-sBF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fv7-en-0Oz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -506,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lxh-m4-USW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1383.2" y="2606.4467766116945"/>
+            <point key="canvasLocation" x="-1119" y="2621"/>
         </scene>
         <!--Stop WatchVC-->
         <scene sceneID="cgL-1c-v4j">
@@ -735,7 +735,7 @@
         <!--Team Selection-->
         <scene sceneID="zUv-ak-Jej">
             <objects>
-                <viewController id="nR3-FU-ySX" customClass="TeamSelection" customModule="non_league_grounds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="nR3-FU-ySX" customClass="TeamSelection" customModule="non_league_grounds" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yMk-tk-GYb"/>
                         <viewControllerLayoutGuide type="bottom" id="CbR-LN-Dya"/>
@@ -791,42 +791,42 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukp-OT-nPX">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukp-OT-nPX">
                                         <rect key="frame" x="72" y="204" width="100" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                         <color key="textColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1B-gf-M82">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1B-gf-M82">
                                         <rect key="frame" x="72" y="233" width="100" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                         <color key="textColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-Zc-kJn">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-Zc-kJn">
                                         <rect key="frame" x="72" y="262" width="100" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                         <color key="textColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eH-0D-MoP">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eH-0D-MoP">
                                         <rect key="frame" x="72" y="291" width="100" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                         <color key="textColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l71-7q-U2c">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l71-7q-U2c">
                                         <rect key="frame" x="72" y="320" width="100" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                         <color key="textColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hb-BM-NbM">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PlayerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hb-BM-NbM">
                                         <rect key="frame" x="72" y="349" width="100" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
@@ -1205,15 +1205,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEg-Fk-FH6">
-                                        <rect key="frame" x="65" y="67" width="100" height="15"/>
+                                        <rect key="frame" x="65" y="68" width="100" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
-                                        <state key="normal" title="PlayerName">
+                                        <state key="normal" title="Select Player">
                                             <color key="titleColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="playerSelectionAction:" destination="nR3-FU-ySX" eventType="touchUpInside" id="wCR-oK-wpf"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs6-x2-rOr">
                                         <rect key="frame" x="65" y="93" width="100" height="15"/>
@@ -1223,7 +1220,7 @@
                                             <color key="titleColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="playerSelectionAction:" destination="nR3-FU-ySX" eventType="touchUpInside" id="CO6-BE-8u0"/>
+                                            <action selector="playerSelectionAction:" destination="nR3-FU-ySX" eventType="touchUpInside" id="r86-pC-rgl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3e-fT-W6B">
@@ -1234,19 +1231,29 @@
                                             <color key="titleColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="playerSelectionAction:" destination="nR3-FU-ySX" eventType="touchUpInside" id="auL-8M-VZL"/>
+                                            <action selector="playerSelectionAction:" destination="nR3-FU-ySX" eventType="touchUpInside" id="hEE-si-XNy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRn-0l-ir6">
-                                        <rect key="frame" x="65" y="146" width="100" height="15"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRn-0l-ir6">
+                                        <rect key="frame" x="65" y="146" width="100" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                         <state key="normal" title="PlayerName">
                                             <color key="titleColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="playerSelectionAction:" destination="nR3-FU-ySX" eventType="touchUpInside" id="7gl-sb-7Ui"/>
-                                            <segue destination="tJC-Uh-R6c" kind="presentation" id="T9X-B1-OP4"/>
+                                            <action selector="playerSelectionAction:" destination="nR3-FU-ySX" eventType="touchUpInside" id="1cs-hn-4EH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tt-F5-XDY">
+                                        <rect key="frame" x="65" y="176" width="100" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                        <state key="normal" title="PlayerName">
+                                            <color key="titleColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playerSelectionAction:" destination="nR3-FU-ySX" eventType="touchUpInside" id="gR8-yu-PkS"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owR-NM-uhe">
@@ -1256,17 +1263,6 @@
                                         <color key="textColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tt-F5-XDY">
-                                        <rect key="frame" x="65" y="175" width="100" height="15"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
-                                        <state key="normal" title="PlayerName">
-                                            <color key="titleColor" red="0.16078431369999999" green="0.32156862749999998" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="playerSelectionAction:" destination="nR3-FU-ySX" eventType="touchUpInside" id="Nst-9G-Td3"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -1281,42 +1277,80 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="homeTeamLabel" destination="OrI-dT-akw" id="KMS-Rl-iHf"/>
+                        <outletCollection property="playerButtons" destination="cs6-x2-rOr" collectionClass="NSMutableArray" id="1G6-Id-SXZ"/>
+                        <outletCollection property="playerButtons" destination="b3e-fT-W6B" collectionClass="NSMutableArray" id="sv9-AZ-yPf"/>
+                        <outletCollection property="playerButtons" destination="dRn-0l-ir6" collectionClass="NSMutableArray" id="FO8-Xu-BrG"/>
+                        <outletCollection property="playerButtons" destination="9tt-F5-XDY" collectionClass="NSMutableArray" id="PKk-Jn-TXg"/>
+                        <segue destination="9dg-Od-Yik" kind="presentation" identifier="HomeTeamSelectionVC" id="qrI-QD-Xai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6K8-Nk-Oug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.80000000000001" y="2620.8395802098953"/>
+            <point key="canvasLocation" x="320.80000000000001" y="2623.5382308845578"/>
         </scene>
-        <!--Team Picker ViewVC-->
-        <scene sceneID="0Sj-Yt-jG3">
+        <!--Home Team SelectionVC-->
+        <scene sceneID="lcc-cV-mIR">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="tJC-Uh-R6c" customClass="TeamPickerViewVC" customModule="non_league_grounds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="9dg-Od-Yik" customClass="HomeTeamSelectionVC" customModule="non_league_grounds" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SRR-VY-hay"/>
-                        <viewControllerLayoutGuide type="bottom" id="uFO-Oc-Wuf"/>
+                        <viewControllerLayoutGuide type="top" id="4aj-MR-Rof"/>
+                        <viewControllerLayoutGuide type="bottom" id="TOr-e5-zgg"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.14999999999999999" contentMode="scaleToFill" id="pqp-1z-oUh">
+                    <view key="view" contentMode="scaleToFill" id="6aR-79-CSo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAA-hs-wLo">
-                                <rect key="frame" x="38" y="398" width="298" height="225"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0013182922266423702" green="0.56314998865127563" blue="0.48229265213012695" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="tJC-Uh-R6c" id="N6h-wJ-KAD"/>
-                                    <outlet property="delegate" destination="tJC-Uh-R6c" id="XbC-Gw-hDk"/>
-                                </connections>
-                            </pickerView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4UP-lc-aru" customClass="RoundedCorners" customModule="non_league_grounds" customModuleProvider="target">
+                                <rect key="frame" x="68" y="316" width="238" height="283"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o9q-h7-tTj">
+                                        <rect key="frame" x="38" y="24" width="163" height="251"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTeamPlayersCell" id="I40-d4-Kp5" customClass="HomeTeamPlayersCell" customModule="non_league_grounds" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="163" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I40-d4-Kp5" id="S3a-87-gVg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="163" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8S0-sx-ey7">
+                                                            <rect key="frame" x="-8" y="11" width="85" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAE-7q-OyK">
+                                                            <rect key="frame" x="85" y="11" width="86" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="firstNameLabel" destination="8S0-sx-ey7" id="hQB-XN-LOp"/>
+                                                    <outlet property="lastNameLabel" destination="IAE-7q-OyK" id="0bh-w6-5Le"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="pickerView" destination="RAA-hs-wLo" id="we6-2a-o07"/>
+                        <outlet property="tableView" destination="o9q-h7-tTj" id="50v-j7-62k"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wud-Tu-IVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O16-gZ-1xs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045.5999999999999" y="2620.8395802098953"/>
+            <point key="canvasLocation" x="993" y="2621"/>
         </scene>
         <!--Club LocationVC-->
         <scene sceneID="dEO-wc-sWh">
@@ -1731,7 +1765,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="263" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
                                                                 <integer key="value" value="5"/>
@@ -1842,6 +1876,9 @@
                                                             <constraint firstAttribute="width" constant="40" id="yI3-gk-xe8"/>
                                                         </constraints>
                                                         <state key="normal" image="facebooklogin"/>
+                                                        <connections>
+                                                            <action selector="facebookBtnTapped:" destination="Mk2-Ap-sBF" eventType="touchUpInside" id="toa-me-oVN"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDD-Eu-Htv">
                                                         <rect key="frame" x="100" y="0.0" width="40" height="40"/>
@@ -1850,6 +1887,9 @@
                                                             <constraint firstAttribute="height" constant="40" id="kiM-dr-5Dr"/>
                                                         </constraints>
                                                         <state key="normal" image="twitterlogin"/>
+                                                        <connections>
+                                                            <action selector="twitterBtnTapped:" destination="Mk2-Ap-sBF" eventType="touchUpInside" id="MCQ-BT-cv4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-Af-HhI">
                                                         <rect key="frame" x="200" y="0.0" width="40" height="40"/>
@@ -1858,6 +1898,9 @@
                                                             <constraint firstAttribute="height" constant="40" id="PJT-Er-aac"/>
                                                         </constraints>
                                                         <state key="normal" image="googlelogin"/>
+                                                        <connections>
+                                                            <action selector="goggleLogin:" destination="Mk2-Ap-sBF" eventType="touchUpInside" id="COw-Ez-GcE"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

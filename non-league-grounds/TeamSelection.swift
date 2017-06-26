@@ -9,11 +9,25 @@
 import UIKit
 import Firebase
 
+class TeamSelection: UIViewController, setSelectedPlayerProtocol {
+    
+    func setSelectedPlayer(selectedPlayer: String) {
+        
+    }
 
-class TeamSelection: UIViewController {
     
     //IBOutlets Collection for Player Names
     @IBOutlet var playerButtons: [UIButton]!
+    
+    //Single IBOulet
+    @IBOutlet weak var singlePlayerButton: UIButton!
+    
+    
+    // IBOutlet Lables
+    @IBOutlet weak var homeTeamLabel: UILabel!
+    
+    
+//    @IBOutlet var Player: [UIView]!
     
     
     var player = [Players]()
@@ -21,20 +35,30 @@ class TeamSelection: UIViewController {
     var clubName = String()
     var playerFirstName = String()
     var playerLastName = String()
-
     
-    @IBOutlet var Player: [UIView]!
+    
+    
+    
+//    var playersT1ArrayFromFB : [Dictionary<String,String>] = []
+    
+    var delegate : setSelectedPlayerProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        for i in 0...playersT1ArrayFromFB.count - 1 {
+//            
+//
+//        }
+//        arrayForSmallVC.append("(playersT1ArryFromFB.playerFirstName ) (playersT1ArrayFromFB.playerLastName)"
+        
+        
+        
         CLUB_KEY = ""
         CLUB_KEY = club.clubKey
         
-        self.navigationItem.title = club.clubName
-        
         DataService.ds.REF_PLAYERS.queryOrdered(byChild: "clubKey").queryEqual(toValue: club.clubKey).observe(.value, with: { (snapshot) in
-        
+            
             print("PLAYERS_COUNT: \(snapshot.childrenCount)")
             print("PLAYERS_SNAPSHOT: \(snapshot)")
             
@@ -51,18 +75,36 @@ class TeamSelection: UIViewController {
                     }
                 }
             }
-//            self.tableView.reloadData()
+            //            self.tableView.reloadData()
         }) { (error) in
             print(error.localizedDescription)
             print("CHET: local error")
         }
     }
+
     
     //IBActions Collection for Player Names
     @IBAction func playerSelectionAction(_ sender: UIButton) {
         
-        let sender = sender.tag
+        let senderINT = sender.tag
+        
+        let selectedBtn = self.view.viewWithTag(senderINT) as! UIButton
+        
+        selectedBtn.setTitle(playerLastName, for: .normal)
+        
+//        self.delegate.setSelectedPlayer(selectedPlayer: playerLastName)
+        
+         self.performSegue(withIdentifier: "HomeTeamSelectionVC", sender: self)
+        
         print(sender)
         
-    }    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "HomeTeamSelectionVC") {
+            let destVC :HomeTeamSelectionVC = segue.destination as! HomeTeamSelectionVC
+            destVC.club = club
+        }
+    }
 }

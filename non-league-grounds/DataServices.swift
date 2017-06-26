@@ -12,11 +12,9 @@ import Firebase
 let DB_BASE = FIRDatabase.database().reference()
 let STORAGE_BASE = FIRStorage.storage().reference()
 
-
 public var LEAGUE_KEY: String!
 public var CLUB_KEY: String!
 public var PLAYER_KEY: String!
-
 
 class DataService {
     static let ds = DataService()

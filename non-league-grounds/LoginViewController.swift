@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import FBSDKLoginKit
+import GoogleSignIn
+import TwitterKit
 
-class LoginViewController: UIViewController {
+
+class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
 
     
     enum LoginType:String {
@@ -131,6 +136,7 @@ class LoginViewController: UIViewController {
                             self.clearLoginTextFields()
                         }
                     }
+                    
                 } else {
                     
                     DispatchQueue.main.async {
@@ -139,9 +145,9 @@ class LoginViewController: UIViewController {
                         print("have we stopped at email after its not verified")
                         self.clearLoginTextFields()
                     }
-                    
+                    print("HERE")
                 }
-                
+                print("HERE")
             })
             
             
@@ -194,9 +200,81 @@ class LoginViewController: UIViewController {
         
     }
     
+    // FaceBook Social Logins Start begin here    
+    @IBAction func facebookBtnTapped(_ sender: Any) {
+        
+        let facebookLogin = FBSDKLoginManager()
+        
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            if error != nil {
+                print("Unable to auth with facebook - \(error ?? "" as! Error)")
+                print(error.debugDescription)
+                print(error?.localizedDescription ?? "")
+            } else if result?.isCancelled == true {
+                
+            } else {
+                
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                Helper.helper.firebaseAuth(credential)
+            }
+            
+            Helper.helper.showAlert(title: "Email in use, did you use another methond to register", msg: "please try again", controller: self)
+        }
+
+    }
+    
+    // Twitter UIButton
+    @IBAction func twitterBtnTapped(_ sender: TWTRLogInButton) {
+        
+        Twitter.sharedInstance().logIn(completion: {session, error in
+            
+            print("Twitter Button Tapped")
+            
+            if (session != nil) {
+                let authToken = session?.authToken
+                let authTokenSecret = session?.authTokenSecret
+                
+                let credential = FIRTwitterAuthProvider.credential(withToken: authToken!, secret: authTokenSecret!)
+                FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+                    if error != nil {
+                        print("First error")
+                        print(error?.localizedDescription ?? "")
+                        print(error.debugDescription)
+                        return
+                    }
+                    
+                    print("Logged in with twitter")
+                    print(user?.displayName ?? "")
+                    print(user?.uid ?? "")
+                    print(user?.email ?? "")
+                    Helper.helper.firebaseAuth(credential)
+                    
+                })
+            } else {
+                if error != nil {
+                    print (error.debugDescription)
+                    print(error?.localizedDescription ?? "")
+                    return
+                }
+            }
+        })
+    }
+    
+    //Google SignIn 
+    @IBAction func goggleLogin(_ sender: Any) {
+        
+        GIDSignIn.sharedInstance().signIn()
+        
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib.\
+        
+        GIDSignIn.sharedInstance().clientID = "1066303110839-iis5am9f5rlnqtd0ggit11r426629gvu.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
         
         self.statusLabel.text = ""
         self.repeatLabelStack.isHidden = true
@@ -207,13 +285,26 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        if error != nil {
+            print(error.localizedDescription)
+            return
+        }
+        
+        Helper.helper.loginWithGoogle(authentication: user.authentication)
+        
+        Helper.helper.showAlert(title: "Email in use, did you use another methond to register", msg: "please try again", controller: self)
+    }
+    
     func clearLoginTextFields() {
         
         self.userName.text = ""
         self.password.text = ""
         self.repeatPassword.text = ""
     }
-}
+    
+ }
 
 extension LoginViewController: UITextFieldDelegate {
     

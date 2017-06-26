@@ -208,6 +208,7 @@ class FirebaseManager {
         })
     }
     
+    
     // Handle Firebase errors
     static func StringFromError(error:Error?)->String {
         
@@ -250,3 +251,4 @@ class FirebaseManager {
         return ""
     }
 }
+

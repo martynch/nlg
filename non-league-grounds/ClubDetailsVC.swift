@@ -24,6 +24,7 @@ class ClubDetailsVC: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var address4Lbl: UILabel!
     @IBOutlet weak var postCodeLbl: UILabel!
     @IBOutlet weak var clubCrest: UIImageView!
+    
     var club: Clubs!
     var players: Players!
     

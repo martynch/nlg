@@ -37,6 +37,7 @@ class ViewController: UIViewController {
             Helper.helper.showAlert(title: "Not Internet Detected", msg: "Data Connectivity is Required", controller: self)
             
         } else {
+            
             self.navigationItem.title = "Non-League Grounds"
 
         }
@@ -77,17 +78,6 @@ class ViewController: UIViewController {
         
         FirebaseManager.signOut()
         
-//        do {
-//            try FIRAuth.auth()?.signOut()
-//
-//        } catch let error {
-//            print(error.localizedDescription)
-//        }
-
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.window?.rootViewController = LoginVC
     }
     
     override func viewDidAppear(_ animated: Bool) {

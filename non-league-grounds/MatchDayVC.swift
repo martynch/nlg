@@ -34,10 +34,9 @@ class MatchDayVC: UIViewController {
             let destVC: StopWatchVC = segue.destination as! StopWatchVC
             destVC.clubName = clubName
             
-        } else if (segue.identifier == "TeamSelection") {
-            let destVC: TeamSelection = segue.destination as! TeamSelection
+        } else if (segue.identifier == "HomeTeamSelectionVC") {
+            let destVC: HomeTeamSelectionVC = segue.destination as! HomeTeamSelectionVC
             destVC.club = club
         }
     }
-    
 }
